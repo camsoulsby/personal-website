@@ -1,21 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from "react";
+import { Topnav } from "./components/Topnav";
+import { PageHeader } from "./components/PageHeader";
+import { Experience } from "./components/Experience";
+import { Portfolio } from "./components/Portfolio";
+import { About } from "./components/About";
+import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
+import lightTheme from "./themes/LightTheme";
+import darkTheme from "./themes/DarkTheme";
 
-function App() {
 
+import {
+  CssBaseline,
+  ThemeProvider,
+} from "@mui/material";
+
+
+
+const App: React.FunctionComponent = () => {
   return (
-    <div className="App">
-   
-      <h1>Cam Soulsby</h1>
-    
-        <p>
-          Operations | Software Development
-        </p>
-      
-     
-    </div>
-  )
-}
+    <ThemeProvider theme={darkTheme}>
 
-export default App
+    
+      <CssBaseline />
+      <Topnav />
+      <PageHeader />
+
+      <main>
+      
+      <About />
+      <Portfolio />
+      <Experience />
+      <Contact />            
+      
+      </main>
+      <footer>
+      <Footer />
+      </footer>
+  
+      </ThemeProvider>
+  );
+};
+
+export default App;
