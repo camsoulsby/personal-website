@@ -1,21 +1,62 @@
 import React from "react";
 import { Typography, Grid, Container, Card, Box } from "@mui/material";
-import { StayPrimaryLandscape } from "@mui/icons-material";
+import { PortfolioCard } from "../PortfolioCard";
 
 export const Portfolio: React.FunctionComponent = () => {
   return (
     <div>
-        <Container maxWidth={false} sx={{height: '400px', backgroundColor:'secondary.main', color: 'primary.main'}}>
-
-        <Typography variant='h2'>Portfolio</Typography>
-      <Grid container spacing={2} justifyContent="center">
-        <Grid item>
-          <Box sx={{height: '200px', width: '200px', backgroundColor: 'primary.main'}}>Card 1</Box>
+      <Container
+        maxWidth={false}
+        sx={{
+          backgroundColor: "secondary.main",
+          color: "primary.main",
+        }}
+      >
+        <Container sx={{ paddingTop: "50px", paddingBottom: "50px" }}>
+        <Typography variant="h2" align='center'>Portfolio</Typography>
+        <Grid container spacing={2} justifyContent="center" paddingTop={'50px'} paddingBottom={'50px'}>
+          <Grid item>
+            <PortfolioCard
+              image="./public/images/personal-website.png"
+              onClick={() => {
+                window.open("https://www.camsoulsby.com", "_blank");
+              }}
+            />
+          </Grid>
+          <Grid item>
+          <PortfolioCard
+              image=""
+              onClick={() => {
+                window.open("https://www.camsoulsby.com", "_blank");
+              }}
+            />
+          </Grid>
+          <Grid item>
+          <PortfolioCard
+              image=""
+              onClick={() => {
+                window.open("https://www.camsoulsby.com", "_blank");
+              }}
+            />
+          </Grid>
+          <Grid item>
+          <PortfolioCard
+              image=""
+              onClick={() => {
+                window.open("https://www.camsoulsby.com", "_blank");
+              }}
+            />
+          </Grid>
+          <Grid item>
+          <PortfolioCard
+              image=""
+              onClick={() => {
+                window.open("https://www.camsoulsby.com", "_blank");
+              }}
+            />
+          </Grid>
         </Grid>
-        <Grid item>
-        <Box sx={{height: '200px', width: '200px', backgroundColor: 'primary.main'}}>Card 2</Box>
-        </Grid>
-      </Grid>
+        </Container>
       </Container>
     </div>
   );
