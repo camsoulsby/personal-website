@@ -12,49 +12,22 @@ export const Portfolio: React.FunctionComponent = () => {
           color: "primary.main",
         }}
       >
-        <Container sx={{ paddingTop: "50px", paddingBottom: "50px" }}>
-        <Typography variant="h2" align='center'>Portfolio</Typography>
-        <Grid container spacing={2} justifyContent="center" paddingTop={'50px'} paddingBottom={'50px'}>
+        <Container sx={{ paddingTop: "150px", paddingBottom: "200px" }}>
+        <Typography variant="h2" align='center'>Web Development Portfolio</Typography>
+        <Grid container spacing={2} justifyContent="center" paddingTop={'80px'} >
           <Grid item>
             <PortfolioCard
+              description="Personal profile (this site)"
+              url="www.camsoulsby.com"
               image="./public/images/personal-website.png"
               onClick={() => {
                 window.open("https://www.camsoulsby.com", "_blank");
               }}
             />
           </Grid>
-          <Grid item>
-          <PortfolioCard
-              image=""
-              onClick={() => {
-                window.open("https://www.camsoulsby.com", "_blank");
-              }}
-            />
-          </Grid>
-          <Grid item>
-          <PortfolioCard
-              image=""
-              onClick={() => {
-                window.open("https://www.camsoulsby.com", "_blank");
-              }}
-            />
-          </Grid>
-          <Grid item>
-          <PortfolioCard
-              image=""
-              onClick={() => {
-                window.open("https://www.camsoulsby.com", "_blank");
-              }}
-            />
-          </Grid>
-          <Grid item>
-          <PortfolioCard
-              image=""
-              onClick={() => {
-                window.open("https://www.camsoulsby.com", "_blank");
-              }}
-            />
-          </Grid>
+          
+      
+         
         </Grid>
         </Container>
       </Container>

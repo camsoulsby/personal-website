@@ -20,7 +20,7 @@ export const About: React.FunctionComponent = () => {
           color: "secondary.main",
         }}
       >
-        <Container sx={{ paddingTop: "50px", paddingBottom: "50px" }}>
+        <Container sx={{ paddingTop: "200px", paddingBottom: "200px" }}>
           <Grid container alignItems="center">
             <Grid item xs={6}>
               <img src="./public/images/Cam.jpg" height={"400px"} />

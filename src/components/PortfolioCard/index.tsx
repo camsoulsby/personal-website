@@ -1,10 +1,31 @@
 import React from 'react'
-import { styled, CardMedia } from '@mui/material'
+import { styled, CardMedia, Typography } from '@mui/material'
 
-export const PortfolioCard = styled(CardMedia)({
-    backgroundColor: 'red',
-    height: '200px',
-    width: '300px',
+interface PortfoloioCardProps {
+    description?: string,
+    url?: string,
+    image: string,
+    onClick: (event: React.MouseEvent<HTMLDivElement>) => void
+        
+    }
+
+
+export const PortfolioCard: React.FC<PortfoloioCardProps> = (props: PortfoloioCardProps) => {
+    return (
+        <>
+        
+        <StyledCardMedia {...props}/>
+        <Typography variant='h6' align='center' sx={{paddingTop: '10px'}}>{props.description ? props.description : ''}</Typography>
+        
+        <Typography variant='h6' align='center' sx={{paddingTop: '10px'}}>{props.url ? props.url : ''}</Typography>
+        </>
+    )
+}
+
+const StyledCardMedia = styled(CardMedia)({
+    backgroundColor: 'white',
+    height: '300px',
+    width: '450px',
     borderRadius: '10px',
     "&:hover": {
        cursor: 'pointer',
@@ -12,3 +33,4 @@ export const PortfolioCard = styled(CardMedia)({
 
 })
 
+export default PortfolioCard;
