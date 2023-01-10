@@ -12,14 +12,7 @@ const DarkTheme = createTheme({
       main: '#e00000',
     },
   },
-  overrides: {
-    MuiContainer: {
-      root: {
-        width: '100%',
-      },
-    },
-  },
- 
+
 });
 
 export default DarkTheme;

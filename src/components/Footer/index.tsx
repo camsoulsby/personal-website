@@ -4,8 +4,8 @@ import { Typography, Container, Button, Grid } from "@mui/material";
 export const Footer: React.FunctionComponent = () => {
   return (
     <div>
-        <Container maxWidth={false} sx={{backgroundColor:'primary.main', color: 'secondary.main'}}>
-        <Typography variant='h2'>[footer]</Typography>
+        <Container maxWidth={false} sx={{height: '500px', backgroundColor:'primary.main', color: 'secondary.main'}}>
+        <Typography variant='body1'>Cam Soulsby © 2023</Typography>
       </Container>
     </div>
   );
