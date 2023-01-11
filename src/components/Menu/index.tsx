@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Typography, Box, List, ListItem, Button } from "@mui/material";
 
 type MenuProps = {
@@ -9,6 +9,24 @@ type MenuProps = {
 }
 export const Menu: React.FunctionComponent<MenuProps> = ( props : MenuProps ) => {
 
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+        const menuNode = event.target as Node;
+        if (menuNode.closest('#menu-box')) return;
+        props.toggleMenuFunction();
+    }
+
+    if (props.showMenu) {
+        document.addEventListener("mousedown", handleClickOutside);
+    } else {
+        document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+    };
+}, [props.showMenu]);
+
     function scrollToPoint(ref: React.MutableRefObject<null>) {
         ref.current.scrollIntoView({ behavior: "smooth" });
       }
@@ -16,7 +34,6 @@ export const Menu: React.FunctionComponent<MenuProps> = ( props : MenuProps ) =>
     const menuHiddenStyle = {
         display: 'flex',
         flexDirection: 'column',
-        height: "400px",
         width: "300px",
         position: 'fixed',
         top: '55px',
@@ -27,8 +44,8 @@ export const Menu: React.FunctionComponent<MenuProps> = ( props : MenuProps ) =>
       };
     
       const menuVisibleStlye = {
-        backgroundColor: "lightGrey",
-        height: "400px",
+        backgroundColor: "secondary.main",
+        
         width: "300px",
         position: 'fixed',
         top: '55px',
@@ -43,7 +60,7 @@ export const Menu: React.FunctionComponent<MenuProps> = ( props : MenuProps ) =>
  
       
   return (
-    <Box sx={ props.showMenu ? menuVisibleStlye : menuHiddenStyle}>
+    <Box id="menu-box" sx={ props.showMenu ? menuVisibleStlye : menuHiddenStyle}>
         <List>
           {props.menuItems.map((item, index) => (
             <ListItem key={item}>
