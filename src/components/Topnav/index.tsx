@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Container, Typography, Box, List, ListItem } from "@mui/material";
 
 type TopNavProps = {
-    toggleMenuFunction: () => void
-    menuShown: boolean
-}
+  toggleMenuFunction: () => void;
+  menuShown: boolean;
+};
 
-export const Topnav: React.FunctionComponent<TopNavProps> = ( props: TopNavProps ) => {
+export const Topnav: React.FunctionComponent<TopNavProps> = (
+  props: TopNavProps
+) => {
 
   return (
     <Container
@@ -22,10 +24,15 @@ export const Topnav: React.FunctionComponent<TopNavProps> = ( props: TopNavProps
         fontSize: "1.5rem",
       }}
     >
-      <Box sx={{ marginLeft: "15px" }} onClick={props.toggleMenuFunction}>
-        <i className={props.menuShown ? "fas fa-times" : "fas fa-bars"} />
+      <Box
+        sx={{ marginLeft: "15px", width: "18px", "&:hover": {
+          cursor: 'pointer',
+         }}}
+        onClick={props.toggleMenuFunction}
+      >
+        <i
+          className={props.menuShown ? "fas fa-times" : "fas fa-bars"}/>
       </Box>
-     
     </Container>
   );
 };

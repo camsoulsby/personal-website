@@ -18,17 +18,21 @@ const App: React.FunctionComponent = () => {
   const portfolioRef = useRef(null);
   const experienceRef = useRef(null);
   const contactRef = useRef(null);
+  
 
   const [menuShown, setMenuShown] = useState(false);
 
   const toggleMenu = () => {
-    setMenuShown(!menuShown);
+    console.log('toggle menu!')
+    setMenuShown(!menuShown)
   };
 
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <Topnav toggleMenuFunction={toggleMenu} menuShown={menuShown} />
+      
+      <Topnav toggleMenuFunction={toggleMenu} menuShown={menuShown}/>
+      
       <Menu
         showMenu={menuShown}
         menuItems={["Home", "About Me", "Portfolio", "Experience", "Contact"]}

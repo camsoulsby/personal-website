@@ -9,23 +9,24 @@ type MenuProps = {
 }
 export const Menu: React.FunctionComponent<MenuProps> = ( props : MenuProps ) => {
 
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-        const menuNode = event.target as Node;
-        if (menuNode.closest('#menu-box')) return;
-        props.toggleMenuFunction();
-    }
+//   useEffect(() => {
+//     function handleClickOutside(event: MouseEvent) {
+//       console.log('mousedown!')
+//         const menuNode = event.target as Node;
+//         if (menuNode.closest('#menu-box')) return;
+//         props.toggleMenuFunction();
+//     }
 
-    if (props.showMenu) {
-        document.addEventListener("mousedown", handleClickOutside);
-    } else {
-        document.removeEventListener("mousedown", handleClickOutside);
-    }
+//     if (props.showMenu) {
+//         document.addEventListener("mousedown", handleClickOutside);
+//     } else {
+//         document.removeEventListener("mousedown", handleClickOutside);
+//     }
 
-    return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-    };
-}, [props.showMenu]);
+//     return () => {
+//         document.removeEventListener("mousedown", handleClickOutside);
+//     };
+// }, [props.showMenu]);
 
     function scrollToPoint(ref: React.MutableRefObject<null>) {
         ref.current.scrollIntoView({ behavior: "smooth" });
