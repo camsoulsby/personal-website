@@ -23,9 +23,11 @@ export const PortfolioCard: React.FC<PortfoloioCardProps> = (props: PortfoloioCa
 }
 
 const StyledCardMedia = styled(CardMedia)({
+    objectPosition: 'bottom',
     backgroundColor: 'white',
+    width: '478px',
     height: '300px',
-    width: '450px',
+    
     borderRadius: '10px',
     "&:hover": {
        cursor: 'pointer',

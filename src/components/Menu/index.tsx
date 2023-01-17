@@ -28,8 +28,10 @@ export const Menu: React.FunctionComponent<MenuProps> = ( props : MenuProps ) =>
 //     };
 // }, [props.showMenu]);
 
-    function scrollToPoint(ref: React.MutableRefObject<null>) {
+    function scrollToPoint(ref: React.MutableRefObject<HTMLElement|null>) {
+      if (ref.current && 'scrollIntoView' in ref.current) {
         ref.current.scrollIntoView({ behavior: "smooth" });
+    }
       }
 
     const menuHiddenStyle = {
