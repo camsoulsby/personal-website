@@ -23,7 +23,7 @@ export const About: React.FunctionComponent = () => {
         <Container sx={{ paddingTop: "200px", paddingBottom: "200px" }}>
           <Grid container alignItems="center">
             <Grid item xs={6}>
-              <img src="./public/images/Cam.jpg" height={"400px"} />
+              <img src="../images/Cam.jpg" height={"400px"} />
             </Grid>
             <Grid item xs={6}>
               <Box>
@@ -32,7 +32,7 @@ export const About: React.FunctionComponent = () => {
                 </Typography>
 
                 <Typography variant="body1" sx={paragraphFormat}>
-                  I am an experienced operational leader and aspiring software
+                  I am an experienced operational leader and junior software
                   developer. My focus is on identifying and implementing
                   technological and managerial strategies to increase efficiency
                   for businesses. I have developed and applied these skills in a

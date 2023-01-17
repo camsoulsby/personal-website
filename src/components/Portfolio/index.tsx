@@ -19,7 +19,7 @@ export const Portfolio: React.FunctionComponent = () => {
             <PortfolioCard
               description="Personal profile (this site)"
               url="www.camsoulsby.com"
-              image="./public/images/personal-website.png"
+              image="../images/personal-website.png"
               onClick={() => {
                 window.open("https://www.camsoulsby.com", "_blank");
               }}
