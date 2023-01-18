@@ -23,11 +23,12 @@ export const About: React.FunctionComponent = () => {
         <Container sx={{ paddingTop: "200px", paddingBottom: "200px" }}>
           <Grid container alignItems="center">
             <Grid item xs={6}>
-              <img src="../images/Cam.jpg" height={"400px"} />
+              {/* todo: convert the below to an MUI component and make responsive with sx prop */}
+              <img src="../images/Cam.jpg" height={'200px'} />
             </Grid>
             <Grid item xs={6}>
               <Box>
-                <Typography variant="h2" align="center">
+                <Typography sx={{typography: {sm: 'h2', xs: 'h4'}}} align="center">
                   About Me
                 </Typography>
 

@@ -40,27 +40,10 @@ export const Experience: React.FunctionComponent = () => {
         sx={{ backgroundColor: "primary.main", color: "secondary.main" }}
       >
         <Container sx={{ paddingTop: "150px", paddingBottom: "200px" }}>
-          <Typography variant="h2" align="center">
+          <Typography sx={{typography: {sm: 'h2', xs: 'h4'}}} align="center">
             Work Experience
           </Typography>
-          {/* <Table sx= {{marginTop: '50px'}}>
-            <TableHead >
-              <TableRow >
-                <TableCell sx={tableHeadStyle1}>Company</TableCell>
-                <TableCell sx={tableHeadStyle2}>Role</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                <TableCell sx={tableBodyStyle1}>mStable</TableCell>
-                <TableCell sx={tableBodyStyle2}>Operations Lead</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell sx={tableBodyStyle1}>NZSki</TableCell>
-                <TableCell sx={tableBodyStyle2}>Head of Guest Services & Reservations, Queenstown</TableCell>
-              </TableRow>
-            </TableBody>
-          </Table> */}
+        
           <Table sx={{ marginTop: "50px" }}>
             <TableHead>
               <TableRow>

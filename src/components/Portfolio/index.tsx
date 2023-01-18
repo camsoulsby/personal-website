@@ -13,22 +13,29 @@ export const Portfolio: React.FunctionComponent = () => {
         }}
       >
         <Container sx={{ paddingTop: "150px", paddingBottom: "200px" }}>
-        <Typography variant="h2" align='center'>Web Development Portfolio</Typography>
-        <Grid container spacing={2} justifyContent="center" paddingTop={'80px'} >
-          <Grid item>
-            <PortfolioCard
-              description="Personal profile (this site)"
-              url="www.camsoulsby.com"
-              image="../images/personal-website.png"
-              onClick={() => {
-                window.open("https://www.camsoulsby.com", "_blank");
-              }}
-            />
+          <Typography
+          sx={{typography: {sm: 'h2', xs: 'h4'}}}
+            align="center"
+          >
+            Web Development Portfolio
+          </Typography>
+          <Grid
+            container
+            spacing={2}
+            justifyContent="center"
+            paddingTop={"80px"}
+          >
+            <Grid item>
+              <PortfolioCard
+                description="Personal profile (this site)"
+                url="www.camsoulsby.com"
+                image="../images/personal-website.png"
+                onClick={() => {
+                  window.open("https://www.camsoulsby.com", "_blank");
+                }}
+              />
+            </Grid>
           </Grid>
-          
-      
-         
-        </Grid>
         </Container>
       </Container>
     </div>
