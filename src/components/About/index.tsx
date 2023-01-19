@@ -4,6 +4,10 @@ import { Typography, Container, Box, Grid} from "@mui/material";
 export const About: React.FunctionComponent = () => {
   const paragraphFormat = {
     marginTop: "20px",
+    sm: {marginLeft: '20px',
+    marginRight: '20px'},
+    xs: {marginLeft: '0px',
+    marginRight: '0px'},
     fontSize: "20px",
     lineHeight: "1.2em",
     textAlign: "justify",
@@ -15,18 +19,18 @@ export const About: React.FunctionComponent = () => {
         maxWidth={false}
         sx={{
           display: "flex",
-          flexDirection: "row",
+          
           backgroundColor: "primary.main",
           color: "secondary.main",
         }}
       >
-        <Container sx={{ paddingTop: "200px", paddingBottom: "200px" }}>
+        <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
           <Grid container alignItems="center">
-            <Grid item xs={6}>
+            <Grid item>
               {/* todo: convert the below to an MUI component and make responsive with sx prop */}
               <img src="../images/Cam.jpg" height={'200px'} />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item>
               <Box>
                 <Typography sx={{typography: {sm: 'h2', xs: 'h4'}}} align="center">
                   About Me

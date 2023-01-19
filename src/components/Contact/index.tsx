@@ -20,7 +20,7 @@ export const Contact: React.FunctionComponent = () => {
         maxWidth={false}
         sx={{ backgroundColor: "secondary.main", color: "primary.main" }}
       >
-        <Container sx={{ paddingTop: "100px", paddingBottom: "150px" }}>
+        <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
           <Typography
             sx={{ typography: { sm: "h2", xs: "h4" } }}
             align="center"
@@ -30,7 +30,7 @@ export const Contact: React.FunctionComponent = () => {
 
           <form noValidate autoComplete="off" onSubmit={handleSubmit}>
             <Grid container flexDirection={"column"}>
-              <Grid item sx={{ textAlign: "center", paddingTop: "10px" }}>
+              <Grid item sx={{ textAlign: "center", paddingTop: "40px" }}>
                 <TextField
                   sx={{ width: "90%" }}
                   id="standard-multiline-static"

@@ -12,7 +12,7 @@ export const PageHeader: React.FunctionComponent = () => {
       >
         Cam Soulsby
       </Typography>
-      <Typography sx={{typography: {sm: 'h5', xs: 'h6'}}} color="white"  align="center" sx={{paddingTop: '50px'}}>
+      <Typography sx={{typography: {sm: 'h5', xs: 'h6'}, paddingTop: '50px'}} color="white"  align="center">
         Business Operations | Software Development
       </Typography>
       </Container>

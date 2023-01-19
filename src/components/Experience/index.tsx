@@ -39,12 +39,15 @@ export const Experience: React.FunctionComponent = () => {
         maxWidth={false}
         sx={{ backgroundColor: "primary.main", color: "secondary.main" }}
       >
-        <Container sx={{ paddingTop: "150px", paddingBottom: "200px" }}>
-          <Typography sx={{typography: {sm: 'h2', xs: 'h4'}}} align="center">
+        <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
+          <Typography
+            sx={{ typography: { sm: "h2", xs: "h4" } }}
+            align="center"
+          >
             Work Experience
           </Typography>
-        
-          <Table sx={{ marginTop: "50px" }}>
+
+          {/* <Table sx={{ marginTop: "50px" }}>
             <TableHead>
               <TableRow>
                 <TableCell sx={tableHeadStyle1}>Company</TableCell>
@@ -176,7 +179,7 @@ export const Experience: React.FunctionComponent = () => {
                 </TableCell>
               </TableRow>
             </TableBody>
-          </Table>
+          </Table> */}
         </Container>
       </Container>
     </div>

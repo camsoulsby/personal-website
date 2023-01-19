@@ -12,7 +12,7 @@ export const Portfolio: React.FunctionComponent = () => {
           color: "primary.main",
         }}
       >
-        <Container sx={{ paddingTop: "150px", paddingBottom: "200px" }}>
+        <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
           <Typography
           sx={{typography: {sm: 'h2', xs: 'h4'}}}
             align="center"
@@ -27,7 +27,7 @@ export const Portfolio: React.FunctionComponent = () => {
           >
             <Grid item>
               <PortfolioCard
-                description="Personal profile (this site)"
+                description="Personal profile"
                 url="www.camsoulsby.com"
                 image="../images/personal-website.png"
                 onClick={() => {
@@ -35,6 +35,17 @@ export const Portfolio: React.FunctionComponent = () => {
                 }}
               />
             </Grid>
+            {/* Second card for testing */}
+            {/* <Grid item>
+              <PortfolioCard
+                description="Personal profile"
+                url="www.camsoulsby.com"
+                image="../images/personal-website.png"
+                onClick={() => {
+                  window.open("https://www.camsoulsby.com", "_blank");
+                }}
+              />
+            </Grid> */}
           </Grid>
         </Container>
       </Container>
