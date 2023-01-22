@@ -31,7 +31,7 @@ export const Experience: React.FunctionComponent = () => {
   }
   // add data
   const rows = [
-    createData("2021-2022", "mStable", "Head of Operations", "Remote", [
+    createData("Current", "mStable", "Head of Operations", "Remote", [
       "Leading operations for a team of 15 building a Decentralised Finance application",
       "Handling day to day HR, payroll, accounting, and legal tasks for legal entities in Germany, Australia and New Zealand as well as for a Decentralized Autonomous Organization",
       "Navigating a complex legal and regulatory environment in an emerging space",
@@ -103,23 +103,6 @@ export const Experience: React.FunctionComponent = () => {
     overflow: "hidden",
   };
 
-  const yearFormat = {
-  
-  }
-
-  const companyFormat = {
-    
-    
-  }
-  const titleFormat = {
-    
-   
-  }
-  const locationFormat = {
-    
-   
-  }
-
   return (
     <div>
       <Container
@@ -142,17 +125,17 @@ export const Experience: React.FunctionComponent = () => {
                   <TableRow>
                   <TableCell sx={{padding: '0'}}>
                   <Grid container xs={12} spacing={0} sx={{margin: '0', padding: '0'}}>
-          <Grid item xs={12} sm={2} sx={{padding: '0'}}>
-            <TableCell sx={{border: 'none', padding: '0 0 0 10px', margin: '0'}}><Typography>{row.year}</Typography></TableCell>
+          <Grid item xs={12} sm={2}>
+            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography sx={{fontWeight: '700'}}>{row.year}</Typography></TableCell>
           </Grid>
-          <Grid item xs={12} sm={2} sx={companyFormat}>
-            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography>{row.company}</Typography></TableCell>
+          <Grid item xs={12} sm={2}>
+            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography sx={{fontWeight: '400'}}>{row.company}</Typography></TableCell>
           </Grid>
-          <Grid item xs={12} sm={4.5} sx={titleFormat}>
-            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography>{row.title}</Typography></TableCell>
+          <Grid item xs={12} sm={4.5}>
+            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography sx={{fontWeight: '300'}}>{row.title}</Typography></TableCell>
           </Grid>
-          <Grid item xs={12} sm={3.5} sx={locationFormat}>
-            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography>{row.location}</Typography></TableCell>
+          <Grid item xs={12} sm={3.5}>
+            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography sx={{fontStyle: 'italic'}}>{row.location}</Typography></TableCell>
           </Grid>
         </Grid>
         </TableCell>
