@@ -7,6 +7,7 @@ import {
   TableCell,
   TableBody,
   Box,
+  Grid,
 } from "@mui/material";
 
 export const Experience: React.FunctionComponent = () => {
@@ -93,7 +94,7 @@ export const Experience: React.FunctionComponent = () => {
 
   const contentVisibleStyle = {
     backgroundColor: "secondary.main",
-    padding: "0",
+    padding: '0',
     maxHeight: "500px",
     transformOrigin: "top",
     transition: "max-height 2s ease",
@@ -101,6 +102,23 @@ export const Experience: React.FunctionComponent = () => {
     border: "none",
     overflow: "hidden",
   };
+
+  const yearFormat = {
+  
+  }
+
+  const companyFormat = {
+    
+    
+  }
+  const titleFormat = {
+    
+   
+  }
+  const locationFormat = {
+    
+   
+  }
 
   return (
     <div>
@@ -122,17 +140,26 @@ export const Experience: React.FunctionComponent = () => {
               {rows.map((row, index) => (
                 <>
                   <TableRow>
-                    <TableCell >
-                      {row.year}
-                    </TableCell>
-                    <TableCell align="right">{row.company}</TableCell>
-                    <TableCell align="right">{row.title}</TableCell>
-                    <TableCell align="right">{row.location}</TableCell>
+                  <TableCell sx={{padding: '0'}}>
+                  <Grid container xs={12} spacing={0} sx={{margin: '0', padding: '0'}}>
+          <Grid item xs={12} sm={2} sx={{padding: '0'}}>
+            <TableCell sx={{border: 'none', padding: '0 0 0 10px', margin: '0'}}><Typography>{row.year}</Typography></TableCell>
+          </Grid>
+          <Grid item xs={12} sm={2} sx={companyFormat}>
+            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography>{row.company}</Typography></TableCell>
+          </Grid>
+          <Grid item xs={12} sm={4.5} sx={titleFormat}>
+            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography>{row.title}</Typography></TableCell>
+          </Grid>
+          <Grid item xs={12} sm={3.5} sx={locationFormat}>
+            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography>{row.location}</Typography></TableCell>
+          </Grid>
+        </Grid>
+        </TableCell>
                     <TableCell
                       align="right"
                       onClick={() => toggleRowShown(index)}
-                      sx={{cursor: 'pointer', width: '50px'}}
-                      
+                      sx={{ cursor: "pointer", width: "50px" }}
                     >
                       {
                         <i
@@ -162,9 +189,9 @@ export const Experience: React.FunctionComponent = () => {
                         <Typography variant="body1" sx={{ padding: "10px" }}>
                           <ul>
                             {row.description.map((item, index) => (
-                              <>
+                              
                                 <li>{item}</li>
-                              </>
+                              
                             ))}
                           </ul>
                         </Typography>
