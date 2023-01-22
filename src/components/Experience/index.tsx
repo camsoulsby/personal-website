@@ -94,7 +94,7 @@ export const Experience: React.FunctionComponent = () => {
 
   const contentVisibleStyle = {
     backgroundColor: "secondary.main",
-    padding: '0',
+    padding: "0",
     maxHeight: "500px",
     transformOrigin: "top",
     transition: "max-height 2s ease",
@@ -123,22 +123,51 @@ export const Experience: React.FunctionComponent = () => {
               {rows.map((row, index) => (
                 <>
                   <TableRow>
-                  <TableCell sx={{padding: '0'}}>
-                  <Grid container xs={12} spacing={0} sx={{margin: '0', padding: '0'}}>
-          <Grid item xs={12} sm={2}>
-            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography sx={{fontWeight: '700'}}>{row.year}</Typography></TableCell>
-          </Grid>
-          <Grid item xs={12} sm={2}>
-            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography sx={{fontWeight: '400'}}>{row.company}</Typography></TableCell>
-          </Grid>
-          <Grid item xs={12} sm={4.5}>
-            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography sx={{fontWeight: '300'}}>{row.title}</Typography></TableCell>
-          </Grid>
-          <Grid item xs={12} sm={3.5}>
-            <TableCell sx={{border: 'none', padding: '0 0 0 10px'}}><Typography sx={{fontStyle: 'italic'}}>{row.location}</Typography></TableCell>
-          </Grid>
-        </Grid>
-        </TableCell>
+                    <TableCell sx={{ padding: "0" }}>
+                      <Grid
+                        container
+                        xs={12}
+                        spacing={0}
+                        sx={{ margin: "0", padding: "0" }}
+                      >
+                        <Grid item xs={12} sm={2}>
+                          <TableCell
+                            sx={{ border: "none", padding: "0 0 0 20px" }}
+                          >
+                            <Typography sx={{ fontWeight: "700" }}>
+                              {row.year}
+                            </Typography>
+                          </TableCell>
+                        </Grid>
+                        <Grid item xs={12} sm={2}>
+                          <TableCell
+                            sx={{ border: "none", padding: "0 0 0 20px" }}
+                          >
+                            <Typography sx={{ fontWeight: "400" }}>
+                              {row.company}
+                            </Typography>
+                          </TableCell>
+                        </Grid>
+                        <Grid item xs={12} sm={4.5}>
+                          <TableCell
+                            sx={{ border: "none", padding: "0 0 0 20px" }}
+                          >
+                            <Typography sx={{ fontWeight: "300" }}>
+                              {row.title}
+                            </Typography>
+                          </TableCell>
+                        </Grid>
+                        <Grid item xs={12} sm={3.5}>
+                          <TableCell
+                            sx={{ border: "none", padding: "0 0 0 20px" }}
+                          >
+                            <Typography sx={{ fontStyle: "italic" }}>
+                              {row.location}
+                            </Typography>
+                          </TableCell>
+                        </Grid>
+                      </Grid>
+                    </TableCell>
                     <TableCell
                       align="right"
                       onClick={() => toggleRowShown(index)}
@@ -172,9 +201,7 @@ export const Experience: React.FunctionComponent = () => {
                         <Typography variant="body1" sx={{ padding: "10px" }}>
                           <ul>
                             {row.description.map((item, index) => (
-                              
-                                <li>{item}</li>
-                              
+                              <li>{item}</li>
                             ))}
                           </ul>
                         </Typography>
