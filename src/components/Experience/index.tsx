@@ -84,8 +84,8 @@ export const Experience: React.FunctionComponent = () => {
   const contentHiddenStyle = {
     backgroundColor: "secondary.main",
     padding: "0",
-    height: "0px",
-    transition: "height 0.5s ease",
+    maxHeight: "0px",
+    transition: "max-height 2s ease",
     verticalAlign: "top",
     border: "none",
     overflow: "hidden",
@@ -94,9 +94,9 @@ export const Experience: React.FunctionComponent = () => {
   const contentVisibleStyle = {
     backgroundColor: "secondary.main",
     padding: "0",
-    height: "150px",
+    maxHeight: "500px",
     transformOrigin: "top",
-    transition: "height 0.5s ease",
+    transition: "max-height 2s ease",
     verticalAlign: "top",
     border: "none",
     overflow: "hidden",
