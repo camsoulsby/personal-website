@@ -92,8 +92,8 @@ export const Experience: React.FunctionComponent = () => {
           >
             <TableBody>
               {rows.map((row, index) => (
-                <React.Fragment>
-                  <TableRow key={index}>
+                <React.Fragment key={index}>
+                  <TableRow>
                     <TableCell
                       sx={
                         index == 0
@@ -166,7 +166,7 @@ export const Experience: React.FunctionComponent = () => {
                     </TableCell>
                   </TableRow>
 
-                  <TableRow key={`${row.year}-collapsed`}>
+                  <TableRow >
                     <TableCell
                       sx={{ border: "none", padding: "0" }}
                       align="left"
