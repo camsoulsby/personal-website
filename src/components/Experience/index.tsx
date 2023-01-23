@@ -83,33 +83,60 @@ export const Experience: React.FunctionComponent = () => {
     ),
   ];
   const contentHiddenStyle = {
-    backgroundColor: "secondary.main",
+    backgroundColor: "white",
     padding: "0",
     maxHeight: "0px",
-    transition: "max-height 2s ease",
+    transition: "all 0.5s ease",
+    verticalAlign: "top",
+    border: "none",
+    overflow: "hidden",
+    opacity: '0'
+  };
+  const contentHiddenStyleLast = {
+    backgroundColor: "white",
+    borderBottomLeftRadius: '10px',
+    borderBottomRightRadius: '10px',
+    padding: "0",
+    maxHeight: "0px",
+    transition: "all 0.5s ease",
+    verticalAlign: "top",
+    border: "none",
+    overflow: "hidden",
+    opacity: '0'
+    
+  };
+
+  const contentVisibleStyle = {
+    backgroundColor: "white",
+    padding: "0",
+    maxHeight: "300px",
+    transformOrigin: "top",
+    transition: "all 1s ease",
     verticalAlign: "top",
     border: "none",
     overflow: "hidden",
   };
-
-  const contentVisibleStyle = {
-    backgroundColor: "secondary.main",
+  const contentVisibleStyleLast = {
+    backgroundColor: "white",
+    borderBottomLeftRadius: '10px',
+    borderBottomRightRadius: '10px',
     padding: "0",
-    maxHeight: "500px",
+    maxHeight: "300px",
     transformOrigin: "top",
-    transition: "max-height 2s ease",
+    transition: "all 1s ease",
     verticalAlign: "top",
     border: "none",
     overflow: "hidden",
+    
   };
 
   return (
     <div>
       <Container
         maxWidth={false}
-        sx={{ backgroundColor: "primary.main", color: "secondary.main" }}
+        sx={{ backgroundColor: "white", color: 'black'}}
       >
-        <Container sx={{ paddingTop: "150px", paddingBottom: "200px" }}>
+        <Container sx={{ paddingTop: "150px", paddingBottom: "200px"}}>
           <Typography variant="h2" align="center">
             Work Experience
           </Typography>
@@ -117,13 +144,16 @@ export const Experience: React.FunctionComponent = () => {
             sx={{
               marginTop: "50px",
               backgroundColor: "white",
+              borderRadius: '10px',
+              boxShadow: '2px 2px 8px 0px rgba(0,0,0,1)',
             }}
           >
+           
             <TableBody>
               {rows.map((row, index) => (
                 <>
                   <TableRow>
-                    <TableCell sx={{ padding: "0" }}>
+                    <TableCell sx={index == 0 ? { padding: "0", border: 'none' } : {padding: "0", borderBottom: 'none', borderTop: '1px solid lightgrey'}}>
                       <Grid
                         container
                         xs={12}
@@ -171,7 +201,7 @@ export const Experience: React.FunctionComponent = () => {
                     <TableCell
                       align="right"
                       onClick={() => toggleRowShown(index)}
-                      sx={{ cursor: "pointer", width: "50px" }}
+                      sx={index == 0 ? { cursor: "pointer", width: "50px", border: 'none' } : { cursor: "pointer", width: "50px", borderBottom: 'none', borderTop: '1px solid lightgrey' }}
                     >
                       {
                         <i
@@ -185,20 +215,20 @@ export const Experience: React.FunctionComponent = () => {
                     </TableCell>
                   </TableRow>
 
-                  <TableRow>
+                  <TableRow >
                     <TableCell
-                      sx={{ border: "0", padding: "0" }}
+                      sx={{ border: 'none', padding: "0" }}
                       align="left"
                       colSpan={5}
                     >
                       <Box
                         sx={
                           tableRowsShown[index]
-                            ? contentVisibleStyle
-                            : contentHiddenStyle
+                            ? (index==rows.length-1) ? contentVisibleStyleLast : contentVisibleStyle
+                            : (index==rows.length-1) ? contentHiddenStyleLast : contentHiddenStyle
                         }
                       >
-                        <Typography variant="body1" sx={{ padding: "10px" }}>
+                        <Typography variant="body1" sx={{ padding: "10px"}}>
                           <ul>
                             {row.description.map((item, index) => (
                               <li>{item}</li>
