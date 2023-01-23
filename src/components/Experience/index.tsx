@@ -8,17 +8,20 @@ import {
   TableBody,
   Box,
   Grid,
+  List,
+  ListItem,
 } from "@mui/material";
 
 export const Experience: React.FunctionComponent = () => {
   const [tableRowsShown, setTableRowsShown] = useState([false, false]);
 
   const toggleRowShown = (index: number) => {
-    console.log(`toggling row ${index}`);
-    const newRowsShown = [...tableRowsShown];
-    newRowsShown[index] = !newRowsShown[index];
-    setTableRowsShown(newRowsShown);
-  };
+    setTableRowsShown(prevState => {
+        const newRowsShown = [...prevState];
+        newRowsShown[index] = !newRowsShown[index];
+        return newRowsShown;
+    });
+};
 
   function createData(
     year: string,
@@ -90,26 +93,25 @@ export const Experience: React.FunctionComponent = () => {
     verticalAlign: "top",
     border: "none",
     overflow: "hidden",
-    opacity: '0'
+    opacity: "0",
   };
   const contentHiddenStyleLast = {
     backgroundColor: "white",
-    borderBottomLeftRadius: '10px',
-    borderBottomRightRadius: '10px',
+    borderBottomLeftRadius: "10px",
+    borderBottomRightRadius: "10px",
     padding: "0",
     maxHeight: "0px",
     transition: "all 0.5s ease",
     verticalAlign: "top",
     border: "none",
     overflow: "hidden",
-    opacity: '0'
-    
+    opacity: "0",
   };
 
   const contentVisibleStyle = {
     backgroundColor: "white",
     padding: "0",
-    maxHeight: "300px",
+    maxHeight: "400px",
     transformOrigin: "top",
     transition: "all 1s ease",
     verticalAlign: "top",
@@ -118,25 +120,24 @@ export const Experience: React.FunctionComponent = () => {
   };
   const contentVisibleStyleLast = {
     backgroundColor: "white",
-    borderBottomLeftRadius: '10px',
-    borderBottomRightRadius: '10px',
+    borderBottomLeftRadius: "10px",
+    borderBottomRightRadius: "10px",
     padding: "0",
-    maxHeight: "300px",
+    maxHeight: "400px",
     transformOrigin: "top",
     transition: "all 1s ease",
     verticalAlign: "top",
     border: "none",
     overflow: "hidden",
-    
   };
 
   return (
     <div>
       <Container
         maxWidth={false}
-        sx={{ backgroundColor: "white", color: 'black'}}
+        sx={{ backgroundColor: "white", color: "black" }}
       >
-        <Container sx={{ paddingTop: "150px", paddingBottom: "200px"}}>
+        <Container sx={{ paddingTop: "150px", paddingBottom: "200px" }}>
           <Typography variant="h2" align="center">
             Work Experience
           </Typography>
@@ -144,64 +145,73 @@ export const Experience: React.FunctionComponent = () => {
             sx={{
               marginTop: "50px",
               backgroundColor: "white",
-              borderRadius: '10px',
-              boxShadow: '2px 2px 8px 0px rgba(0,0,0,1)',
+              borderRadius: "10px",
+              boxShadow: "2px 2px 8px 0px rgba(0,0,0,1)",
             }}
           >
-           
             <TableBody>
               {rows.map((row, index) => (
                 <>
-                  <TableRow>
-                    <TableCell sx={index == 0 ? { padding: "0", border: 'none' } : {padding: "0", borderBottom: 'none', borderTop: '1px solid lightgrey'}}>
+                  <TableRow key={index}>
+                    <TableCell
+                      sx={
+                        index == 0
+                          ? { padding: "0", border: "none" }
+                          : {
+                              padding: "0",
+                              borderBottom: "none",
+                              borderTop: "1px solid lightgrey",
+                            }
+                      }
+                    >
                       <Grid
                         container
-                        xs={12}
                         spacing={0}
                         sx={{ margin: "0", padding: "0" }}
                       >
                         <Grid item xs={12} sm={2}>
-                          <TableCell
-                            sx={{ border: "none", padding: "0 0 0 20px" }}
+                          <Typography
+                            sx={{ fontWeight: "700", padding: "0 0 0 20px" }}
                           >
-                            <Typography sx={{ fontWeight: "700" }}>
-                              {row.year}
-                            </Typography>
-                          </TableCell>
+                            {row.year}
+                          </Typography>
                         </Grid>
                         <Grid item xs={12} sm={2}>
-                          <TableCell
-                            sx={{ border: "none", padding: "0 0 0 20px" }}
+                          <Typography
+                            sx={{ fontWeight: "400", padding: "0 0 0 20px" }}
                           >
-                            <Typography sx={{ fontWeight: "400" }}>
-                              {row.company}
-                            </Typography>
-                          </TableCell>
+                            {row.company}
+                          </Typography>
                         </Grid>
                         <Grid item xs={12} sm={4.5}>
-                          <TableCell
-                            sx={{ border: "none", padding: "0 0 0 20px" }}
+                          <Typography
+                            sx={{ fontWeight: "300", padding: "0 0 0 20px" }}
                           >
-                            <Typography sx={{ fontWeight: "300" }}>
-                              {row.title}
-                            </Typography>
-                          </TableCell>
+                            {row.title}
+                          </Typography>
                         </Grid>
                         <Grid item xs={12} sm={3.5}>
-                          <TableCell
-                            sx={{ border: "none", padding: "0 0 0 20px" }}
+                          <Typography
+                            sx={{ fontStyle: "italic", padding: "0 0 0 20px" }}
                           >
-                            <Typography sx={{ fontStyle: "italic" }}>
-                              {row.location}
-                            </Typography>
-                          </TableCell>
+                            {row.location}
+                          </Typography>
                         </Grid>
                       </Grid>
                     </TableCell>
                     <TableCell
                       align="right"
                       onClick={() => toggleRowShown(index)}
-                      sx={index == 0 ? { cursor: "pointer", width: "50px", border: 'none' } : { cursor: "pointer", width: "50px", borderBottom: 'none', borderTop: '1px solid lightgrey' }}
+                      sx={
+                        index == 0
+                          ? { cursor: "pointer", width: "50px", border: "none" }
+                          : {
+                              cursor: "pointer",
+                              width: "50px",
+                              borderBottom: "none",
+                              borderTop: "1px solid lightgrey",
+                            }
+                      }
                     >
                       {
                         <i
@@ -215,30 +225,42 @@ export const Experience: React.FunctionComponent = () => {
                     </TableCell>
                   </TableRow>
 
-                  <TableRow >
+                  <TableRow key={`${row.year}-collapsed`}>
                     <TableCell
-                      sx={{ border: 'none', padding: "0" }}
+                      sx={{ border: "none", padding: "0" }}
                       align="left"
                       colSpan={5}
                     >
                       <Box
                         sx={
                           tableRowsShown[index]
-                            ? (index==rows.length-1) ? contentVisibleStyleLast : contentVisibleStyle
-                            : (index==rows.length-1) ? contentHiddenStyleLast : contentHiddenStyle
+                            ? index == rows.length - 1
+                              ? contentVisibleStyleLast
+                              : contentVisibleStyle
+                            : index == rows.length - 1
+                            ? contentHiddenStyleLast
+                            : contentHiddenStyle
                         }
                       >
-                        <Typography variant="body1" sx={{ padding: "10px"}}>
-                          <ul>
-                            {row.description.map((item, index) => (
-                              <li>{item}</li>
-                            ))}
-                          </ul>
-                        </Typography>
+                        <List
+                          sx={{
+                            paddingTop: "0px",
+                            listStyleType: "disc",
+                            pl: 4,
+                          }}
+                        >
+                          {row.description.map((item, index) => (
+                            <ListItem key={index}
+                              sx={{ display: "list-item", paddingLeft: "0" }}
+                            >
+                              {item}
+                            </ListItem>
+                          ))}
+                        </List>
                       </Box>
                     </TableCell>
-                  </TableRow>
-                </>
+                  </TableRow> 
+                </> 
               ))}
             </TableBody>
           </Table>
