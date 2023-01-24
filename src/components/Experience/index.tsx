@@ -80,7 +80,7 @@ export const Experience: React.FunctionComponent = () => {
       >
         <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
           <Typography
-            sx={{ typography: { sm: "h2", xs: "h4" } }}
+            sx={{ typography: ["h4", 'h3', "h2"]}}
             align="center"
           >
             Work Experience

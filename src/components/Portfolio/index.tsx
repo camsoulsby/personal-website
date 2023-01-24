@@ -14,7 +14,7 @@ export const Portfolio: React.FunctionComponent = () => {
       >
         <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
           <Typography
-          sx={{typography: {sm: 'h2', xs: 'h4'}}}
+          sx={{typography: ["h4", 'h3', "h2"]}}
             align="center"
           >
             Web Development Portfolio
@@ -27,19 +27,17 @@ export const Portfolio: React.FunctionComponent = () => {
           >
             <Grid item>
               <PortfolioCard
-                description="Personal profile"
-                url="www.camsoulsby.com"
+                description="Personal profile - camsoulsby.com"
                 image="../images/personal-website.png"
                 onClick={() => {
                   window.open("https://www.camsoulsby.com", "_blank");
                 }}
               />
             </Grid>
-            {/* Second card for testing */}
+            
             {/* <Grid item>
               <PortfolioCard
-                description="Personal profile"
-                url="www.camsoulsby.com"
+                description="Personal profile - camsoulsby.com"
                 image="../images/personal-website.png"
                 onClick={() => {
                   window.open("https://www.camsoulsby.com", "_blank");
