@@ -78,8 +78,11 @@ export const Experience: React.FunctionComponent = () => {
         maxWidth={false}
         sx={{ backgroundColor: "white", color: "black" }}
       >
-        <Container sx={{ paddingTop: "150px", paddingBottom: "200px" }}>
-          <Typography variant="h2" align="center">
+        <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
+          <Typography
+            sx={{ typography: ["h4", 'h3', "h2"]}}
+            align="center"
+          >
             Work Experience
           </Typography>
           <Table

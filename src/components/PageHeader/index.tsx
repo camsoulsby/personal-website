@@ -6,13 +6,13 @@ export const PageHeader: React.FunctionComponent = () => {
     <Container maxWidth={false} sx = {{paddingTop: '100px', height: '800px', background: 'url("../images/remarks.jpg") top center/cover no-repeat'}}>
 
       <Typography
-        variant="h2"
+        sx={{typography: {sm: 'h2', xs: 'h3'}}}
         align="center"
         color="white"
       >
         Cam Soulsby
       </Typography>
-      <Typography variant="h5" color="white"  align="center" sx={{paddingTop: '50px'}}>
+      <Typography sx={{typography: {sm: 'h5', xs: 'h6'}, paddingTop: '50px'}} color="white"  align="center">
         Business Operations | Software Development
       </Typography>
       </Container>

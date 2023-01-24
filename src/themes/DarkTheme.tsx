@@ -12,7 +12,6 @@ const DarkTheme = createTheme({
       main: '#e00000',
     },
   },
-
 });
 
 export default DarkTheme;
