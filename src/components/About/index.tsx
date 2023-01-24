@@ -1,9 +1,8 @@
 import React from "react";
-import { Typography, Container, Box, Grid, Avatar } from "@mui/material";
+import { Typography, Container, Box, Grid, Avatar, SxProps } from "@mui/material";
 
 export const About: React.FunctionComponent = () => {
-  const paragraphFormat = {
-   
+  const paragraphFormat: SxProps = {
     sm: { marginLeft: "20px", marginRight: "20px" },
     xs: { marginLeft: "0px", marginRight: "0px" },
     fontSize: { sm: "18px", xs: "16px" },

@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, CardMedia, Typography, Grid } from "@mui/material";
+import { styled, CardMedia, Typography} from "@mui/material";
 
 interface PortfoloioCardProps {
   description: string;
