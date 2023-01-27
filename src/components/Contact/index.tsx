@@ -21,10 +21,7 @@ export const Contact: React.FunctionComponent = () => {
         sx={{ backgroundColor: "secondary.main", color: "primary.main" }}
       >
         <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
-          <Typography
-            sx={{ typography: ["h4", 'h3', "h2"]}}
-            align="center"
-          >
+          <Typography sx={{ typography: ["h4", "h3", "h2"] }} align="center">
             Contact Me
           </Typography>
 

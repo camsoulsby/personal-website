@@ -3,16 +3,15 @@ import { createTheme } from "@mui/material";
 const LightTheme = createTheme({
   palette: {
     primary: {
-      main: '#ffffff',
+      main: "#ffffff",
     },
     secondary: {
-      main: '#000000',
+      main: "#000000",
     },
     error: {
-      main: '#e00000',
+      main: "#e00000",
     },
   },
- 
 });
 
 export default LightTheme;

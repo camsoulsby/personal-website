@@ -12,20 +12,19 @@ import {
   ListItem,
 } from "@mui/material";
 
-import { rows } from '../../data/experienceData'
+import { rows } from "../../data/experienceData";
 
 export const Experience: React.FunctionComponent = () => {
   const [tableRowsShown, setTableRowsShown] = useState([false, false]);
 
   const toggleRowShown = (index: number) => {
-    setTableRowsShown(prevState => {
-        const newRowsShown = [...prevState];
-        newRowsShown[index] = !newRowsShown[index];
-        return newRowsShown;
+    setTableRowsShown((prevState) => {
+      const newRowsShown = [...prevState];
+      newRowsShown[index] = !newRowsShown[index];
+      return newRowsShown;
     });
-};
+  };
 
-  
   const contentHiddenStyle = {
     backgroundColor: "white",
     padding: "0",
@@ -79,10 +78,7 @@ export const Experience: React.FunctionComponent = () => {
         sx={{ backgroundColor: "white", color: "black" }}
       >
         <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
-          <Typography
-            sx={{ typography: ["h4", 'h3', "h2"]}}
-            align="center"
-          >
+          <Typography sx={{ typography: ["h4", "h3", "h2"] }} align="center">
             Work Experience
           </Typography>
           <Table
@@ -169,7 +165,7 @@ export const Experience: React.FunctionComponent = () => {
                     </TableCell>
                   </TableRow>
 
-                  <TableRow >
+                  <TableRow>
                     <TableCell
                       sx={{ border: "none", padding: "0" }}
                       align="left"
@@ -194,7 +190,8 @@ export const Experience: React.FunctionComponent = () => {
                           }}
                         >
                           {row.description.map((item, index) => (
-                            <ListItem key={index}
+                            <ListItem
+                              key={index}
                               sx={{ display: "list-item", paddingLeft: "0" }}
                             >
                               {item}
@@ -203,7 +200,7 @@ export const Experience: React.FunctionComponent = () => {
                         </List>
                       </Box>
                     </TableCell>
-                  </TableRow> 
+                  </TableRow>
                 </React.Fragment>
               ))}
             </TableBody>

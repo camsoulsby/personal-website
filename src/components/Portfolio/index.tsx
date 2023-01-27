@@ -13,10 +13,7 @@ export const Portfolio: React.FunctionComponent = () => {
         }}
       >
         <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
-          <Typography
-          sx={{typography: ["h4", 'h3', "h2"]}}
-            align="center"
-          >
+          <Typography sx={{ typography: ["h4", "h3", "h2"] }} align="center">
             Web Development Portfolio
           </Typography>
           <Grid
@@ -34,7 +31,7 @@ export const Portfolio: React.FunctionComponent = () => {
                 }}
               />
             </Grid>
-            
+
             {/* <Grid item>
               <PortfolioCard
                 description="Personal profile - camsoulsby.com"

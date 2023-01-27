@@ -33,9 +33,11 @@ export const Footer: React.FunctionComponent = () => {
         }}
       >
         <Container sx={{ paddingTop: "30px", paddingBottom: "50px" }}>
-         
-
-          <Grid container justifyContent="center" sx={{ paddingTop: "20px", paddingBottom: '20px' }}>
+          <Grid
+            container
+            justifyContent="center"
+            sx={{ paddingTop: "20px", paddingBottom: "20px" }}
+          >
             <IconButton
               href={"https://github.com/camsoulsby"}
               target="_blank"
@@ -60,13 +62,17 @@ export const Footer: React.FunctionComponent = () => {
           </Grid>
           <Typography variant="body1" align="center">
             <Button
-              sx={{ color: "secondary.main"}}
+              sx={{ color: "secondary.main" }}
               onClick={() => downloadFile("./documents/resume.pdf")}
             >
               Download Resume
             </Button>
           </Typography>
-          <Typography variant="body1" align="center" sx={{paddingTop: '10px'}}>
+          <Typography
+            variant="body1"
+            align="center"
+            sx={{ paddingTop: "10px" }}
+          >
             &copy; 2023 Cam Soulsby
           </Typography>
         </Container>

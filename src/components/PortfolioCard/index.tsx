@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, CardMedia, Typography} from "@mui/material";
+import { styled, CardMedia, Typography } from "@mui/material";
 
 interface PortfoloioCardProps {
   description: string;
@@ -21,16 +21,18 @@ export const PortfolioCard: React.FC<PortfoloioCardProps> = (
           height: { sm: "300px", xs: "240px" },
         }}
       />
-    
-          <Typography
-            variant="body1"
-            align="center"
-            sx={{ paddingTop: "5px", paddingBottom: "10px", fontSize: { sm: "18px", xs: "16px" } }}
-          >
-            {props.description}
 
-          </Typography>
-     
+      <Typography
+        variant="body1"
+        align="center"
+        sx={{
+          paddingTop: "5px",
+          paddingBottom: "10px",
+          fontSize: { sm: "18px", xs: "16px" },
+        }}
+      >
+        {props.description}
+      </Typography>
     </>
   );
 };

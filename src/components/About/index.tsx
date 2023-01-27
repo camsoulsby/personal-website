@@ -1,5 +1,12 @@
 import React from "react";
-import { Typography, Container, Box, Grid, Avatar, SxProps } from "@mui/material";
+import {
+  Typography,
+  Container,
+  Box,
+  Grid,
+  Avatar,
+  SxProps,
+} from "@mui/material";
 
 export const About: React.FunctionComponent = () => {
   const paragraphFormat: SxProps = {
@@ -8,7 +15,7 @@ export const About: React.FunctionComponent = () => {
     fontSize: { sm: "18px", xs: "16px" },
     lineHeight: "1.3em",
     textAlign: "left",
-    paddingTop: ["50px", "50px" , "0px"]
+    paddingTop: ["50px", "50px", "0px"],
   };
 
   return (
@@ -22,7 +29,10 @@ export const About: React.FunctionComponent = () => {
         }}
       >
         <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
-          <Typography sx={{marginBottom: '50px', typography: ["h4", "h3", "h2"] }} align="center">
+          <Typography
+            sx={{ marginBottom: "50px", typography: ["h4", "h3", "h2"] }}
+            align="center"
+          >
             About Me
           </Typography>
 
@@ -43,7 +53,6 @@ export const About: React.FunctionComponent = () => {
                 sx={{
                   width: ["200px", "250px"],
                   height: ["200px", "250px"],
-             
                 }}
               />
             </Grid>

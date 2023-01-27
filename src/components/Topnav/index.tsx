@@ -9,7 +9,6 @@ type TopNavProps = {
 export const Topnav: React.FunctionComponent<TopNavProps> = (
   props: TopNavProps
 ) => {
-
   return (
     <Container
       disableGutters
@@ -25,13 +24,16 @@ export const Topnav: React.FunctionComponent<TopNavProps> = (
       }}
     >
       <Box
-        sx={{ marginLeft: "15px", width: "18px", "&:hover": {
-          cursor: 'pointer',
-         }}}
+        sx={{
+          marginLeft: "15px",
+          width: "18px",
+          "&:hover": {
+            cursor: "pointer",
+          },
+        }}
         onClick={props.toggleMenuFunction}
       >
-        <i
-          className={props.menuShown ? "fas fa-times" : "fas fa-bars"}/>
+        <i className={props.menuShown ? "fas fa-times" : "fas fa-bars"} />
       </Box>
     </Container>
   );
