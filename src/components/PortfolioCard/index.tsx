@@ -8,14 +8,14 @@ interface PortfoloioCardProps {
 }
 
 export const PortfolioCard: React.FC<PortfoloioCardProps> = (
-  props: PortfoloioCardProps
+  {description, image, onClick}: PortfoloioCardProps
 ) => {
   return (
     <>
       {/* todo: figure out how to make screenshot images scale from top-left of Card (issue #5) */}
 
       <StyledCardMedia
-        {...props}
+        {...{description, image, onClick}}
         sx={{
           width: { sm: "480px", xs: "384px" },
           height: { sm: "300px", xs: "240px" },
@@ -27,7 +27,7 @@ export const PortfolioCard: React.FC<PortfoloioCardProps> = (
             align="center"
             sx={{ paddingTop: "5px", paddingBottom: "10px", fontSize: { sm: "18px", xs: "16px" } }}
           >
-            {props.description}
+            {description}
 
           </Typography>
      

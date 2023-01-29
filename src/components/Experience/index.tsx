@@ -10,11 +10,14 @@ import {
   Grid,
   List,
   ListItem,
+  SxProps
 } from "@mui/material";
 
 import { rows } from "../../data/experienceData";
 
-export const Experience: React.FunctionComponent = () => {
+type ExperienceProps = {};
+
+export const Experience: React.FunctionComponent<ExperienceProps> = () => {
   const [tableRowsShown, setTableRowsShown] = useState([false, false]);
 
   const toggleRowShown = (index: number) => {
@@ -25,7 +28,7 @@ export const Experience: React.FunctionComponent = () => {
     });
   };
 
-  const contentHiddenStyle = {
+  const contentHiddenStyle: SxProps = {
     backgroundColor: "white",
     padding: "0",
     maxHeight: "0px",
@@ -35,7 +38,7 @@ export const Experience: React.FunctionComponent = () => {
     overflow: "hidden",
     opacity: "0",
   };
-  const contentHiddenStyleLast = {
+  const contentHiddenStyleLast: SxProps = {
     backgroundColor: "white",
     borderBottomLeftRadius: "10px",
     borderBottomRightRadius: "10px",
@@ -48,7 +51,7 @@ export const Experience: React.FunctionComponent = () => {
     opacity: "0",
   };
 
-  const contentVisibleStyle = {
+  const contentVisibleStyle: SxProps = {
     backgroundColor: "white",
     padding: "0",
     maxHeight: "400px",
@@ -58,7 +61,7 @@ export const Experience: React.FunctionComponent = () => {
     border: "none",
     overflow: "hidden",
   };
-  const contentVisibleStyleLast = {
+  const contentVisibleStyleLast: SxProps = {
     backgroundColor: "white",
     borderBottomLeftRadius: "10px",
     borderBottomRightRadius: "10px",

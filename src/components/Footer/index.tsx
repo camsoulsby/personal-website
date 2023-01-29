@@ -1,16 +1,16 @@
 import React from "react";
 import { Typography, Container, Button, Grid, IconButton } from "@mui/material";
 import {
-  FaFacebook,
   FaTwitter,
-  FaInstagram,
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
-import DarkTheme from "../../themes/DarkTheme";
+// useTheme is a hook that allows you to access the theme object from the ThemeProvider higher in the component tree.
 import { useTheme } from "@mui/material";
 
-export const Footer: React.FunctionComponent = () => {
+type FooterProps = {};
+
+export const Footer: React.FunctionComponent<FooterProps> = () => {
   const theme = useTheme();
   const iconButtonFormat = { paddingLeft: "40px", paddingRight: "60px" };
 

@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
-  Container,
-  Typography,
   Box,
   List,
   ListItem,
@@ -14,7 +12,7 @@ type MenuProps = {
   toggleMenuFunction: () => void;
   menuItems: string[];
 };
-export const Menu: React.FunctionComponent<MenuProps> = (props: MenuProps) => {
+export const Menu: React.FunctionComponent<MenuProps> = ({ showMenu, scrollRefs, toggleMenuFunction, menuItems }: MenuProps) => {
   //   useEffect(() => {
   //     function handleClickOutside(event: MouseEvent) {
   //       console.log('mousedown!')
@@ -65,14 +63,14 @@ export const Menu: React.FunctionComponent<MenuProps> = (props: MenuProps) => {
   };
 
   return (
-    <Box id="menu-box" sx={props.showMenu ? menuVisibleStlye : menuHiddenStyle}>
+    <Box id="menu-box" sx={showMenu ? menuVisibleStlye : menuHiddenStyle}>
       <List>
-        {props.menuItems.map((item, index) => (
+        {menuItems.map((item, index) => (
           <ListItem key={item}>
             <Button
               onClick={() => {
-                scrollToPoint(props.scrollRefs[index]);
-                props.toggleMenuFunction();
+                scrollToPoint(scrollRefs[index]);
+                toggleMenuFunction();
               }}
             >
               {item}

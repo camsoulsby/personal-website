@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import { Container, Typography, Box, List, ListItem } from "@mui/material";
+import React from "react";
+import { Container, Box } from "@mui/material";
 
 type TopNavProps = {
   toggleMenuFunction: () => void;
@@ -7,7 +7,7 @@ type TopNavProps = {
 };
 
 export const Topnav: React.FunctionComponent<TopNavProps> = (
-  props: TopNavProps
+  {toggleMenuFunction, menuShown}: TopNavProps
 ) => {
   return (
     <Container
@@ -31,9 +31,9 @@ export const Topnav: React.FunctionComponent<TopNavProps> = (
             cursor: "pointer",
           },
         }}
-        onClick={props.toggleMenuFunction}
+        onClick={toggleMenuFunction}
       >
-        <i className={props.menuShown ? "fas fa-times" : "fas fa-bars"} />
+        <i className={menuShown ? "fas fa-times" : "fas fa-bars"} />
       </Box>
     </Container>
   );

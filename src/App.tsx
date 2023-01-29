@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { About, Contact, Experience, Footer, Menu, PageHeader, Portfolio, Topnav } from './components';
-import lightTheme from "./themes/LightTheme";
 import darkTheme from "./themes/DarkTheme";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";

@@ -8,8 +8,10 @@ import {
   SxProps,
 } from "@mui/material";
 
-export const About: React.FunctionComponent = () => {
-  const paragraphFormat: SxProps = {
+type AboutProps = {};
+
+export const About: React.FunctionComponent<AboutProps> = () => {
+  const paragraphStyles: SxProps = {
     sm: { marginLeft: "20px", marginRight: "20px" },
     xs: { marginLeft: "0px", marginRight: "0px" },
     fontSize: { sm: "18px", xs: "16px" },
@@ -39,11 +41,11 @@ export const About: React.FunctionComponent = () => {
           <Grid container justifyContent="center" alignItems="center">
             <Grid
               item
+              alignItems="center"
               xs={12}
               sm={5}
               sx={{
                 display: "flex",
-                alignItems: "center",
                 justifyContent: "center",
               }}
             >
@@ -58,7 +60,7 @@ export const About: React.FunctionComponent = () => {
             </Grid>
             <Grid item sm={12} md={7}>
               <Box>
-                <Typography variant="body1" sx={paragraphFormat}>
+                <Typography variant="body1" sx={paragraphStyles}>
                   I am an experienced operational leader and junior software
                   developer. My focus is on identifying and implementing
                   technological and managerial strategies to increase efficiency
@@ -69,7 +71,7 @@ export const About: React.FunctionComponent = () => {
                   serving as Operations Lead for a fintech startup in the
                   decentralized finance space.
                 </Typography>
-                <Typography variant="body1" sx={paragraphFormat}>
+                <Typography variant="body1" sx={paragraphStyles}>
                   I am currently open to full or part-time management or
                   software development roles, either in Central Otago, New
                   Zealand, or based remotely. With my diverse experience and

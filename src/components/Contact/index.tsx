@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Typography, Container, Button, TextField, Grid } from "@mui/material";
 
-export const Contact: React.FunctionComponent = () => {
+type ContactProps = {};
+
+export const Contact: React.FunctionComponent<ContactProps> = () => {
   const [emailText, setEmailText] = useState("");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
