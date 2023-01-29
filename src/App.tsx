@@ -1,16 +1,9 @@
 import React, { useRef, useState } from "react";
-import { Topnav } from "./components/Topnav";
-import { PageHeader } from "./components/PageHeader";
-import { Experience } from "./components/Experience";
-import { Portfolio } from "./components/Portfolio";
-import { About } from "./components/About";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
-import { Menu } from "./components/Menu";
+import { About, Contact, Experience, Footer, Menu, PageHeader, Portfolio, Topnav } from './components';
 import lightTheme from "./themes/LightTheme";
 import darkTheme from "./themes/DarkTheme";
 
-import { CssBaseline, ThemeProvider, Container } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 
 const App: React.FunctionComponent = () => {
   const homeRef = useRef(null);
@@ -18,21 +11,20 @@ const App: React.FunctionComponent = () => {
   const portfolioRef = useRef(null);
   const experienceRef = useRef(null);
   const contactRef = useRef(null);
-  
 
   const [menuShown, setMenuShown] = useState(false);
 
   const toggleMenu = () => {
-    console.log('toggle menu!')
-    setMenuShown(!menuShown)
+    console.log("toggle menu!");
+    setMenuShown(!menuShown);
   };
 
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      
-      <Topnav toggleMenuFunction={toggleMenu} menuShown={menuShown}/>
-      
+
+      <Topnav toggleMenuFunction={toggleMenu} menuShown={menuShown} />
+
       <Menu
         showMenu={menuShown}
         menuItems={["Home", "About Me", "Portfolio", "Experience", "Contact"]}
