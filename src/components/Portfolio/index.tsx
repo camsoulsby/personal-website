@@ -1,6 +1,6 @@
 import React from "react";
-import { Typography, Grid, Container, Card, Box } from "@mui/material";
-import { PortfolioCard } from "../PortfolioCard";
+import { Typography, Grid, Container} from "@mui/material";
+import { PortfolioCard } from "../../components";
 
 export const Portfolio: React.FunctionComponent = () => {
   return (
