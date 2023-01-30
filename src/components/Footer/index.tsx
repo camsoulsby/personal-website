@@ -28,8 +28,8 @@ export const Footer: React.FunctionComponent<FooterProps> = () => {
       <Container
         maxWidth={false}
         sx={{
-          backgroundColor: "primary.main",
-          color: "secondary.main",
+          backgroundColor: "primary.dark",
+          color: "text.secondary",
         }}
       >
         <Container sx={{ paddingTop: "30px", paddingBottom: "50px" }}>
@@ -43,26 +43,26 @@ export const Footer: React.FunctionComponent<FooterProps> = () => {
               target="_blank"
               sx={iconButtonFormat}
             >
-              <FaGithub color={theme.palette.secondary.main} size="40px" />
+              <FaGithub color={theme.palette.text.secondary} size="40px" />
             </IconButton>
             <IconButton
               href={"https://www.linkedin.com/in/camsoulsby/"}
               target="_blank"
               sx={iconButtonFormat}
             >
-              <FaLinkedin color={theme.palette.secondary.main} size="40px" />
+              <FaLinkedin color={theme.palette.text.secondary} size="40px" />
             </IconButton>
             <IconButton
               href={"https://twitter.com/camsoulsby"}
               target="_blank"
               sx={iconButtonFormat}
             >
-              <FaTwitter color={theme.palette.secondary.main} size="40px" />
+              <FaTwitter color={theme.palette.text.secondary} size="40px" />
             </IconButton>
           </Grid>
           <Typography variant="body1" align="center">
             <Button
-              sx={{ color: "secondary.main" }}
+              sx={{ color: "text.secondary" }}
               onClick={() => downloadFile("./documents/resume.pdf")}
             >
               Download Resume

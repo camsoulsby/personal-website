@@ -15,12 +15,13 @@ export const Topnav: React.FunctionComponent<TopNavProps> = (
       maxWidth={false}
       sx={{
         position: "fixed",
-        backgroundColor: "black",
-        color: "white",
+        backgroundColor: "primary.dark",
+        color: "text.secondary",
         height: "55px",
         paddingTop: "11px",
         paddingLeft: "0px",
         fontSize: "1.5rem",
+        zIndex: "100",
       }}
     >
       <Box

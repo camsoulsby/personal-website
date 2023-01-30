@@ -10,7 +10,7 @@ import {
   Grid,
   List,
   ListItem,
-  SxProps
+  SxProps,
 } from "@mui/material";
 
 import { rows } from "../../data/experienceData";
@@ -29,7 +29,8 @@ export const Experience: React.FunctionComponent<ExperienceProps> = () => {
   };
 
   const contentHiddenStyle: SxProps = {
-    backgroundColor: "white",
+    backgroundColor: "grey.50",
+    color: "text.primary",
     padding: "0",
     maxHeight: "0px",
     transition: "all 0.5s ease",
@@ -39,7 +40,8 @@ export const Experience: React.FunctionComponent<ExperienceProps> = () => {
     opacity: "0",
   };
   const contentHiddenStyleLast: SxProps = {
-    backgroundColor: "white",
+    backgroundColor: "grey.50",
+    color: "text.primary",
     borderBottomLeftRadius: "10px",
     borderBottomRightRadius: "10px",
     padding: "0",
@@ -52,7 +54,8 @@ export const Experience: React.FunctionComponent<ExperienceProps> = () => {
   };
 
   const contentVisibleStyle: SxProps = {
-    backgroundColor: "white",
+    backgroundColor: "grey.50",
+    color: "text.primary",
     padding: "0",
     maxHeight: "400px",
     transformOrigin: "top",
@@ -62,7 +65,8 @@ export const Experience: React.FunctionComponent<ExperienceProps> = () => {
     overflow: "hidden",
   };
   const contentVisibleStyleLast: SxProps = {
-    backgroundColor: "white",
+    backgroundColor: "grey.50",
+    color: "text.primary",
     borderBottomLeftRadius: "10px",
     borderBottomRightRadius: "10px",
     padding: "0",
@@ -78,7 +82,7 @@ export const Experience: React.FunctionComponent<ExperienceProps> = () => {
     <div>
       <Container
         maxWidth={false}
-        sx={{ backgroundColor: "white", color: "black" }}
+        sx={{ backgroundColor: "secondary.main", color: "text.primary" }}
       >
         <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
           <Typography sx={{ typography: ["h4", "h3", "h2"] }} align="center">
@@ -87,9 +91,9 @@ export const Experience: React.FunctionComponent<ExperienceProps> = () => {
           <Table
             sx={{
               marginTop: "50px",
-              backgroundColor: "white",
+              backgroundColor: "grey.50",
               borderRadius: "10px",
-              boxShadow: "2px 2px 8px 0px rgba(0,0,0,1)",
+              boxShadow: "10px 10px 20px 0px rgba(0,0,0,1)",
             }}
           >
             <TableBody>
@@ -99,11 +103,16 @@ export const Experience: React.FunctionComponent<ExperienceProps> = () => {
                     <TableCell
                       sx={
                         index == 0
-                          ? { padding: "0", border: "none" }
+                          ? {
+                              padding: "0",
+                              border: "none",
+                              color: "text.primary",
+                            }
                           : {
                               padding: "0",
                               borderBottom: "none",
                               borderTop: "1px solid lightgrey",
+                              color: "text.primary",
                             }
                       }
                     >
@@ -147,12 +156,13 @@ export const Experience: React.FunctionComponent<ExperienceProps> = () => {
                       onClick={() => toggleRowShown(index)}
                       sx={
                         index == 0
-                          ? { cursor: "pointer", width: "50px", border: "none" }
+                          ? { cursor: "pointer", width: "50px", border: "none", color: "text.primary" }
                           : {
                               cursor: "pointer",
                               width: "50px",
                               borderBottom: "none",
                               borderTop: "1px solid lightgrey",
+                              color: "text.primary"
                             }
                       }
                     >

@@ -20,7 +20,7 @@ export const Contact: React.FunctionComponent<ContactProps> = () => {
     <div>
       <Container
         maxWidth={false}
-        sx={{ backgroundColor: "secondary.main", color: "primary.main" }}
+        sx={{ backgroundColor: "primary.light", color: "text.secondary" }}
       >
         <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
           <Typography sx={{ typography: ["h4", "h3", "h2"] }} align="center">
@@ -29,9 +29,17 @@ export const Contact: React.FunctionComponent<ContactProps> = () => {
 
           <form noValidate autoComplete="off" onSubmit={handleSubmit}>
             <Grid container flexDirection={"column"}>
-              <Grid item sx={{ textAlign: "center", paddingTop: "40px" }}>
+              <Grid
+                item
+                sx={{ textAlign: "center", paddingTop: "40px", color: "red" }}
+              >
                 <TextField
-                  sx={{ width: "90%" }}
+                  sx={{
+                    width: "90%",
+                    backgroundColor: "grey.50",
+                    borderRadius: "10px",
+                  
+                  }}
                   id="standard-multiline-static"
                   multiline
                   rows={12}
@@ -41,7 +49,17 @@ export const Contact: React.FunctionComponent<ContactProps> = () => {
                 />
               </Grid>
               <Grid item sx={{ textAlign: "center", paddingTop: "30px" }}>
-                <Button variant="contained" color="primary" type="submit">
+                <Button
+                  variant="contained"
+                  type="submit"
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: "secondary.dark",
+                    },
+                    backgroundColor: "secondary.main",
+                    color: "text.primary",
+                  }}
+                >
                   Send Email
                 </Button>
               </Grid>
