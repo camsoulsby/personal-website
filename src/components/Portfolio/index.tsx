@@ -2,13 +2,15 @@ import React from "react";
 import { Typography, Grid, Container} from "@mui/material";
 import { PortfolioCard } from "../../components";
 
-export const Portfolio: React.FunctionComponent = () => {
+type PortfolioProps = {};
+
+export const Portfolio: React.FunctionComponent<PortfolioProps> = () => {
   return (
     <div>
       <Container
         maxWidth={false}
         sx={{
-          backgroundColor: "secondary.main",
+          backgroundColor: "grey.50",
           color: "primary.main",
         }}
       >
@@ -32,15 +34,42 @@ export const Portfolio: React.FunctionComponent = () => {
               />
             </Grid>
 
-            {/* <Grid item>
+            <Grid item>
               <PortfolioCard
                 description="Personal profile - camsoulsby.com"
-                image="../images/personal-website.png"
+                image="../images/paisley.jpg"
                 onClick={() => {
                   window.open("https://www.camsoulsby.com", "_blank");
                 }}
               />
-            </Grid> */}
+            </Grid>
+            <Grid item>
+              <PortfolioCard
+                description="Personal profile - camsoulsby.com"
+                image="../images/paisley.jpg"
+                onClick={() => {
+                  window.open("https://www.camsoulsby.com", "_blank");
+                }}
+              />
+            </Grid>
+            <Grid item>
+              <PortfolioCard
+                description="Personal profile - camsoulsby.com"
+                image="../images/paisley.jpg"
+                onClick={() => {
+                  window.open("https://www.camsoulsby.com", "_blank");
+                }}
+              />
+            </Grid>
+            <Grid item>
+              <PortfolioCard
+                description="Personal profile - camsoulsby.com"
+                image="../images/paisley.jpg"
+                onClick={() => {
+                  window.open("https://www.camsoulsby.com", "_blank");
+                }}
+              />
+            </Grid>
           </Grid>
         </Container>
       </Container>

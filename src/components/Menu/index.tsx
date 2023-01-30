@@ -12,6 +12,7 @@ type MenuProps = {
   toggleMenuFunction: () => void;
   menuItems: string[];
 };
+
 export const Menu: React.FunctionComponent<MenuProps> = ({ showMenu, scrollRefs, toggleMenuFunction, menuItems }: MenuProps) => {
   //   useEffect(() => {
   //     function handleClickOutside(event: MouseEvent) {
@@ -51,7 +52,7 @@ export const Menu: React.FunctionComponent<MenuProps> = ({ showMenu, scrollRefs,
   };
 
   const menuVisibleStlye = {
-    backgroundColor: "secondary.main",
+    backgroundColor: "grey.400",
 
     width: "300px",
     position: "fixed",

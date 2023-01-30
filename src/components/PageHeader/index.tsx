@@ -1,26 +1,31 @@
 import { Typography, Container } from "@mui/material";
 
-export const PageHeader: React.FunctionComponent = () => {
+type PageHeaderProps = {};
+
+export const PageHeader: React.FunctionComponent<PageHeaderProps> = () => {
   return (
     <div>
       <Container
         maxWidth={false}
         sx={{
-          paddingTop: "100px",
-          height: "800px",
-          background: 'url("../images/remarks.jpg") top center/cover no-repeat',
+          paddingTop: "120px",
+          height: "360px",
+          // background: 'url("../images/paisley.jpg") top center/cover no-repeat',
+          // filter: 'brightness(50%)'
+          backgroundColor: "primary.main",
         }}
       >
         <Typography
           sx={{ typography: { sm: "h2", xs: "h3" } }}
           align="center"
-          color="white"
+          color="text.secondary"
         >
           Cam Soulsby
         </Typography>
+
         <Typography
           sx={{ typography: { sm: "h5", xs: "h6" }, paddingTop: "50px" }}
-          color="white"
+          color="text.secondary"
           align="center"
         >
           Business Operations | Software Development
