@@ -25,7 +25,7 @@ export const PageHeader: React.FunctionComponent<PageHeaderProps> = () => {
 
         <Typography
           sx={{ typography: { sm: "h5", xs: "h6" }, paddingTop: "50px" }}
-          color="text.secondary"
+          color="secondary.main"
           align="center"
         >
           Business Operations | Software Development

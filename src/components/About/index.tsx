@@ -26,8 +26,8 @@ export const About: React.FunctionComponent<AboutProps> = () => {
         maxWidth={false}
         sx={{
           display: "flex",
-          backgroundColor: "secondary.main",
-          color: "text.primary",
+          backgroundColor: "primary.dark",
+          color: "text.secondary",
         }}
       >
         <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
