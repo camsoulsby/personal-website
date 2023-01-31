@@ -10,7 +10,7 @@ export const PageHeader: React.FunctionComponent<PageHeaderProps> = () => {
         sx={{
           position: "relative",
           paddingTop: "120px",
-          height: "600px",
+          height: ["600px", "780px", "600px"],
         }}
       >
         <Box
@@ -36,13 +36,12 @@ export const PageHeader: React.FunctionComponent<PageHeaderProps> = () => {
             typography: ["h3", "h2", "h1"],
           }}
           align="center"
-          color="text.secondary"
+          color="primary.contrastText"
         >
           Cam Soulsby
         </Typography>
 
         <Typography
-
           sx={{
             position: "absolute",
             top: ["300px", "320px", "340px"],
@@ -52,10 +51,9 @@ export const PageHeader: React.FunctionComponent<PageHeaderProps> = () => {
             width: ["300px", "600px", "800px"],
             typography: ["h6", "h5", "h4"],
           }}
-          color="text.secondary"
-
-          sx={{ typography: { sm: "h5", xs: "h6" }, paddingTop: "50px" }}
-          color="secondary.main"   >
+          align="center"
+          color="primary.contrastText"
+        >
           Business Operations | Software Development
         </Typography>
       </Container>

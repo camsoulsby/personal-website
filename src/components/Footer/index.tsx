@@ -29,7 +29,7 @@ export const Footer: React.FunctionComponent<FooterProps> = () => {
         maxWidth={false}
         sx={{
           backgroundColor: "primary.dark",
-          color: "text.secondary",
+          color: "primary.contrastText",
         }}
       >
         <Container sx={{ paddingTop: "30px", paddingBottom: "50px" }}>
@@ -43,21 +43,21 @@ export const Footer: React.FunctionComponent<FooterProps> = () => {
               target="_blank"
               sx={iconButtonFormat}
             >
-              <FaGithub color={theme.palette.text.secondary} size="40px" />
+              <FaGithub color={theme.palette.primary.contrastText} size="40px" />
             </IconButton>
             <IconButton
               href={"https://www.linkedin.com/in/camsoulsby/"}
               target="_blank"
               sx={iconButtonFormat}
             >
-              <FaLinkedin color={theme.palette.text.secondary} size="40px" />
+              <FaLinkedin color={theme.palette.primary.contrastText} size="40px" />
             </IconButton>
             <IconButton
               href={"https://twitter.com/camsoulsby"}
               target="_blank"
               sx={iconButtonFormat}
             >
-              <FaTwitter color={theme.palette.text.secondary} size="40px" />
+              <FaTwitter color={theme.palette.primary.contrastText} size="40px" />
             </IconButton>
           </Grid>
           <Typography variant="body1" align="center">
