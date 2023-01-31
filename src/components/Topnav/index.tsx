@@ -16,7 +16,7 @@ export const Topnav: React.FunctionComponent<TopNavProps> = (
       sx={{
         position: "fixed",
         backgroundColor: "primary.dark",
-        color: "text.secondary",
+        color: "primary.contrastText",
         height: "55px",
         paddingTop: "11px",
         paddingLeft: "0px",

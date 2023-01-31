@@ -6,11 +6,13 @@ const DarkTheme = createTheme({
       main: "#212121",
       light: "#484848",
       dark: "#000000",
+      contrastText: "#ffffff",
     },
     secondary: {
-      main: "#4dd0e1",
+      main: "#e65100",
       light: "#88ffff",
       dark: "#009faf",
+      contrastText: "#ffffff",
       
     },
     grey: {
@@ -22,10 +24,6 @@ const DarkTheme = createTheme({
     },
     error: {
       main: "#e00000",
-    },
-    text: {
-      primary: "#000000",
-      secondary: "#FFFFFF",
     },
   },
 });

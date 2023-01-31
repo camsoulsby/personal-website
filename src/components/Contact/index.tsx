@@ -20,7 +20,7 @@ export const Contact: React.FunctionComponent<ContactProps> = () => {
     <div>
       <Container
         maxWidth={false}
-        sx={{ backgroundColor: "primary.light", color: "text.secondary" }}
+        sx={{ backgroundColor: "primary.light", color: "primary.contrastText" }}
       >
         <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
           <Typography sx={{ typography: ["h4", "h3", "h2"] }} align="center">
@@ -57,7 +57,7 @@ export const Contact: React.FunctionComponent<ContactProps> = () => {
                       backgroundColor: "secondary.dark",
                     },
                     backgroundColor: "secondary.main",
-                    color: "text.primary",
+                    color: "secondary.contrastText",
                   }}
                 >
                   Send Email
