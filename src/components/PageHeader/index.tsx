@@ -9,7 +9,7 @@ export const PageHeader: React.FunctionComponent<PageHeaderProps> = () => {
         maxWidth={false}
         sx={{
           paddingTop: "120px",
-          height: "360px",
+          height: "600px",
           // background: 'url("../images/paisley.jpg") top center/cover no-repeat',
           // filter: 'brightness(50%)'
           backgroundColor: "primary.main",
