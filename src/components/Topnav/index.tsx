@@ -22,6 +22,8 @@ export const Topnav: React.FunctionComponent<TopNavProps> = (
         paddingLeft: "0px",
         fontSize: "1.5rem",
         zIndex: "100",
+        // borderBottom: "1px solid",
+        // borderBottomColor: "grey.400",
       }}
     >
       <Box
