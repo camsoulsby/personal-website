@@ -1,10 +1,7 @@
 import React from "react";
 import { Typography, Container, Button, Grid, IconButton } from "@mui/material";
-import {
-  FaTwitter,
-  FaLinkedin,
-  FaGithub,
-} from "react-icons/fa";
+import { GitHub, LinkedIn, StayPrimaryLandscape, Twitter } from "@mui/icons-material";
+
 // useTheme is a hook that allows you to access the theme object from the ThemeProvider higher in the component tree.
 import { useTheme } from "@mui/material";
 
@@ -43,26 +40,27 @@ export const Footer: React.FunctionComponent<FooterProps> = () => {
               target="_blank"
               sx={iconButtonFormat}
             >
-              <FaGithub color={theme.palette.primary.contrastText} size="40px" />
+              <GitHub sx={{color: "primary.contrastText", transform: 'scale(1.8)'}}/>
             </IconButton>
             <IconButton
               href={"https://www.linkedin.com/in/camsoulsby/"}
               target="_blank"
               sx={iconButtonFormat}
             >
-              <FaLinkedin color={theme.palette.primary.contrastText} size="40px" />
+            
+              <LinkedIn sx={{color: "primary.contrastText", transform: 'scale(1.8)'}}/>
             </IconButton>
             <IconButton
               href={"https://twitter.com/camsoulsby"}
               target="_blank"
               sx={iconButtonFormat}
             >
-              <FaTwitter color={theme.palette.primary.contrastText} size="40px" />
+             <Twitter sx={{color: "primary.contrastText", transform: 'scale(1.8)'}}/>
             </IconButton>
           </Grid>
           <Typography variant="body1" align="center">
             <Button
-              sx={{ color: "text.secondary" }}
+              sx={{ color: "primary.contrastText" }}
               onClick={() => downloadFile("./documents/resume.pdf")}
             >
               Download Resume
