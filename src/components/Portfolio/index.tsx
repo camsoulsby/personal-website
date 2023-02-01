@@ -30,7 +30,7 @@ export const Portfolio: React.FunctionComponent<PortfolioProps> = () => {
             <Grid item>
               <PortfolioCard
                 description="Personal profile website built with React, Material UI, and TypeScript."
-                image="../images/personal-website.png"
+                image="../images/paisley.jpg"
                 githubLink="https://github.com/camsoulsby/personal-website"
                 siteLink="https://www.camsoulsby.com"
               />
@@ -38,12 +38,13 @@ export const Portfolio: React.FunctionComponent<PortfolioProps> = () => {
             <Grid item>
               <PortfolioCard
                 description="More coming soon..."
-                image="../images/paisley.jpg"
+                image=""
                 githubLink=""
                 siteLink=""
               />
             </Grid>
-         
+           
+          
           </Grid>
         </Container>
       </Container>

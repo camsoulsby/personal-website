@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { styled, CardMedia, Typography, Button, Box } from "@mui/material";
+import React, { useState } from "react";
+import { CardMedia, Typography, Box } from "@mui/material";
 import { GitHub, OpenInNew } from "@mui/icons-material";
 
 interface PortfoloioCardProps {
@@ -25,32 +25,30 @@ export const PortfolioCard: React.FC<PortfoloioCardProps> = ({
     setShowInfo(false);
   };
 
-  useEffect(() => {
-    // remove useEffect if no side effects required
-  }, [showInfo]);
   return (
     <>
       {/* todo: figure out how to make screenshot images scale from top-left of Card (issue #5) */}
 
-      <StyledCardMedia
+      <CardMedia
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         {...{ description }}
         sx={{
-          backgroundColor: "green",
           position: "relative",
           width: ["280px", "360px"],
           height: ["175px", "225px"],
           boxShadow: "10px 10px 20px 0px rgba(0,0,0,1)",
-          margin: "20px",
+          marginTop: ["20px", "20px"],
+          marginBottom: ["100px", "20px"],
         }}
       >
         <Box
           sx={{
-            background: `url("${image}") top center/cover no-repeat`,
+            backgroundColor: "primary.dark",
+            background: image ? `url("${image}") top center/cover no-repeat` : "",
             height: "100%",
             width: "100%",
-            filter: showInfo ? "brightness(40%)" : "none",
+            filter: ["none", showInfo ? "brightness(40%)" : "none"],
             transition: "filter 0.5s ease-in-out",
           }}
         ></Box>
@@ -58,13 +56,16 @@ export const PortfolioCard: React.FC<PortfoloioCardProps> = ({
           variant="body1"
           align="center"
           sx={{
-            opacity: showInfo ? "1" : "0",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            height: "100%",
+            opacity: ["1", showInfo ? "1" : "0"],
             position: "absolute",
-            top: "100px",
-            left: "0",
-            color: "white",
-            paddingTop: "5px",
-            paddingBottom: "10px",
+            top: ["170px", "0"],
+            color: ["primary.dark", "primary.contrastText"],
+
             fontSize: { sm: "18px", xs: "16px" },
             transition: "opacity 0.5s ease-in-out",
           }}
@@ -73,43 +74,38 @@ export const PortfolioCard: React.FC<PortfoloioCardProps> = ({
         </Typography>
         <GitHub
           sx={{
-            opacity: showInfo ? "1" : "0",
+            transform: ["scale(1.4)", "scale(1.8)"],
+            opacity: ["1", showInfo ? "1" : "0"],
             position: "absolute",
-            color: "primary.contrastText",
-            top: "170px",
-            transition: "opacity 0.5s ease-in-out",
+            color: ["primary.dark", "primary.contrastText"],
+            top: ["200px", "184px"],
+            left: ["35px", "20px"],
+            transition: ["none", "opacity 0.5s ease-in-out"],
             "&:hover": {
-                color: "secondary.light",
-              },
-           
+              color: "secondary.light",
+            },
           }}
           onClick={() => window.open(githubLink, "_blank")}
         />
 
         <OpenInNew
           sx={{
-            color: "primary.contrastText",
-            opacity: showInfo ? "1" : "0",
+            transform: ["scale(1.4)", "scale(1.8)"],
+            color: ["primary.dark", "primary.contrastText"],
+            opacity: ["1", showInfo ? "1" : "0"],
             position: "absolute",
-            top: "170px",
-            left: "200px",
-            transition: "opacity 0.5s ease-in-out",
+            top: ["200px", "184px"],
+            left: ["220px", "320px"],
+            transition: ["none", "opacity 0.5s ease-in-out"],
             "&:hover": {
-                color: "secondary.light",
-              },
+              color: "secondary.light",
+            },
           }}
           onClick={() => window.open(siteLink, "_blank")}
         />
-      </StyledCardMedia>
+      </CardMedia>
     </>
   );
 };
-
-const StyledCardMedia = styled(CardMedia)({
-  backgroundColor: "white",
-  "&:hover": {
-    cursor: "pointer",
-  },
-});
 
 export default PortfolioCard;
