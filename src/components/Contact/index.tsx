@@ -22,7 +22,7 @@ export const Contact: React.FunctionComponent<ContactProps> = () => {
         maxWidth={false}
         sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
       >
-        <Container sx={{ paddingTop: "60px", paddingBottom: "100px" }}>
+        <Container sx={{ paddingTop: "60px", paddingBottom: "200px" }}>
           <Typography sx={{ typography: ["h4", "h3", "h2"] }} align="center">
             Contact Me
           </Typography>
@@ -42,7 +42,7 @@ export const Contact: React.FunctionComponent<ContactProps> = () => {
                   }}
                   id="standard-multiline-static"
                   multiline
-                  rows={12}
+                  rows={6}
                   placeholder="Enter message"
                   margin="normal"
                   onChange={handleChange}

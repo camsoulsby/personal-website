@@ -38,19 +38,19 @@ const App: React.FunctionComponent = () => {
       />
 
       <main>
-        <div style={{ scrollMarginTop: "55px" }} ref={homeRef}>
+        <div style={{ scrollMarginTop: "50px" }} ref={homeRef}>
           <PageHeader />
         </div>
-        <div style={{ scrollMarginTop: "55px" }} ref={aboutRef}>
+        <div style={{ scrollMarginTop: "50px" }} ref={aboutRef}>
           <About />
         </div>
-        <div style={{ scrollMarginTop: "55px" }} ref={portfolioRef}>
+        <div style={{ scrollMarginTop: "50px" }} ref={portfolioRef}>
           <Portfolio />
         </div>
-        <div style={{ scrollMarginTop: "55px" }} ref={experienceRef}>
+        <div style={{ scrollMarginTop: "50px" }} ref={experienceRef}>
           <Experience />
         </div>
-        <div style={{ scrollMarginTop: "55px" }} ref={contactRef}>
+        <div style={{ scrollMarginTop: "50px" }} ref={contactRef}>
           <Contact />
         </div>
       </main>
