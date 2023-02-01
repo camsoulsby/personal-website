@@ -56,7 +56,7 @@ export const Menu: React.FunctionComponent<MenuProps> = ({ showMenu, scrollRefs,
 
     width: "300px",
     position: "fixed",
-    top: "55px",
+    top: "50px",
     left: "0",
     opacity: "1",
     transition: "all 0.5s ease",

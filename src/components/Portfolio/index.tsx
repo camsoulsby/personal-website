@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Grid, Container} from "@mui/material";
+import { Typography, Grid, Container, Box} from "@mui/material";
 import { PortfolioCard } from "../../components";
 
 type PortfolioProps = {};
@@ -8,68 +8,42 @@ export const Portfolio: React.FunctionComponent<PortfolioProps> = () => {
   return (
     <div>
       <Container
+      disableGutters
         maxWidth={false}
         sx={{
           backgroundColor: "grey.50",
           color: "primary.main",
         }}
       >
-        <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
-          <Typography sx={{ typography: ["h4", "h3", "h2"] }} align="center">
+        <Container disableGutters sx={{paddingBottom: "100px" }}>
+        
+          <Typography sx={{ padding: '50px 20px 40px 20px',  typography: ["h4", "h3", "h2"]}} align="center">
             Web Development Portfolio
           </Typography>
           <Grid
             container
             spacing={2}
             justifyContent="center"
-            paddingTop={"80px"}
+
           >
-            <Grid item>
-              <PortfolioCard
-                description="Personal profile - camsoulsby.com"
-                image="../images/personal-website.png"
-                onClick={() => {
-                  window.open("https://www.camsoulsby.com", "_blank");
-                }}
-              />
-            </Grid>
 
             <Grid item>
               <PortfolioCard
-                description="Personal profile - camsoulsby.com"
-                image="../images/paisley.jpg"
-                onClick={() => {
-                  window.open("https://www.camsoulsby.com", "_blank");
-                }}
+                description="Personal profile website built with React, Material UI, and TypeScript."
+                image="../images/personal-website.png"
+                githubLink="https://github.com/camsoulsby/personal-website"
+                siteLink="https://www.camsoulsby.com"
               />
             </Grid>
             <Grid item>
               <PortfolioCard
-                description="Personal profile - camsoulsby.com"
+                description="More coming soon..."
                 image="../images/paisley.jpg"
-                onClick={() => {
-                  window.open("https://www.camsoulsby.com", "_blank");
-                }}
+                githubLink=""
+                siteLink=""
               />
             </Grid>
-            <Grid item>
-              <PortfolioCard
-                description="Personal profile - camsoulsby.com"
-                image="../images/paisley.jpg"
-                onClick={() => {
-                  window.open("https://www.camsoulsby.com", "_blank");
-                }}
-              />
-            </Grid>
-            <Grid item>
-              <PortfolioCard
-                description="Personal profile - camsoulsby.com"
-                image="../images/paisley.jpg"
-                onClick={() => {
-                  window.open("https://www.camsoulsby.com", "_blank");
-                }}
-              />
-            </Grid>
+         
           </Grid>
         </Container>
       </Container>

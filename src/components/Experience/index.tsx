@@ -12,6 +12,7 @@ import {
   ListItem,
   SxProps,
 } from "@mui/material";
+import { Add , Remove } from "@mui/icons-material";
 
 import { rows } from "../../data/experienceData";
 
@@ -84,7 +85,7 @@ export const Experience: React.FunctionComponent<ExperienceProps> = () => {
         maxWidth={false}
         sx={{ backgroundColor: "secondary.main", color: "text.primary" }}
       >
-        <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
+        <Container sx={{ paddingTop: "60px", paddingBottom: "100px" }}>
           <Typography sx={{ typography: ["h4", "h3", "h2"] }} align="center">
             Work Experience
           </Typography>
@@ -167,13 +168,9 @@ export const Experience: React.FunctionComponent<ExperienceProps> = () => {
                       }
                     >
                       {
-                        <i
-                          className={
-                            tableRowsShown[index]
-                              ? "fas fa-minus"
-                              : "fas fa-plus"
-                          }
-                        />
+                        tableRowsShown[index]
+                        ? <Remove />
+                        : <Add />
                       }
                     </TableCell>
                   </TableRow>

@@ -20,9 +20,9 @@ export const Contact: React.FunctionComponent<ContactProps> = () => {
     <div>
       <Container
         maxWidth={false}
-        sx={{ backgroundColor: "primary.light", color: "primary.contrastText" }}
+        sx={{ backgroundColor: "primary.main", color: "primary.contrastText" }}
       >
-        <Container sx={{ paddingTop: "100px", paddingBottom: "100px" }}>
+        <Container sx={{ paddingTop: "60px", paddingBottom: "100px" }}>
           <Typography sx={{ typography: ["h4", "h3", "h2"] }} align="center">
             Contact Me
           </Typography>
@@ -31,7 +31,7 @@ export const Contact: React.FunctionComponent<ContactProps> = () => {
             <Grid container flexDirection={"column"}>
               <Grid
                 item
-                sx={{ textAlign: "center", paddingTop: "40px", color: "red" }}
+                sx={{ textAlign: "center", paddingTop: "50px", color: "red" }}
               >
                 <TextField
                   sx={{
