@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Grid, Container, Box} from "@mui/material";
+import { Typography, Grid, Container } from "@mui/material";
 import { PortfolioCard } from "../../components";
 
 type PortfolioProps = {};

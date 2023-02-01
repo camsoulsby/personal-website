@@ -1,14 +1,11 @@
 import React from "react";
 import { Typography, Container, Button, Grid, IconButton } from "@mui/material";
-import { GitHub, LinkedIn, StayPrimaryLandscape, Twitter } from "@mui/icons-material";
+import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
 
-// useTheme is a hook that allows you to access the theme object from the ThemeProvider higher in the component tree.
-import { useTheme } from "@mui/material";
 
 type FooterProps = {};
 
 export const Footer: React.FunctionComponent<FooterProps> = () => {
-  const theme = useTheme();
   const iconButtonFormat = { paddingLeft: "40px", paddingRight: "60px" };
 
   function downloadFile(file: string) {
