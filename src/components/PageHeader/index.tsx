@@ -40,22 +40,6 @@ export const PageHeader: React.FunctionComponent<PageHeaderProps> = () => {
         >
           Cam Soulsby
         </Typography>
-
-        <Typography
-          sx={{
-            position: "absolute",
-            top: ["300px", "320px", "340px"],
-            left: "50%",
-            marginLeft: ["-150px", "-300px", "-400px"],
-            height: "auto",
-            width: ["300px", "600px", "800px"],
-            typography: ["h6", "h5", "h4"],
-          }}
-          align="center"
-          color="primary.contrastText"
-        >
-          Business Operations | Software Development
-        </Typography>
       </Container>
     </div>
   );
