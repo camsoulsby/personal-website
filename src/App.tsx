@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import {
-  About,
-  Contact,
-  Experience,
+  // About,
+  // Contact,
+  // Experience,
   Footer,
   Menu,
   PageHeader,
