@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Box,
-  List,
-  ListItem,
-  Button,
-} from "@mui/material";
+import { Box, List, ListItem, Button } from "@mui/material";
 
 type MenuProps = {
   showMenu: boolean;
@@ -13,7 +8,12 @@ type MenuProps = {
   menuItems: string[];
 };
 
-export const Menu: React.FunctionComponent<MenuProps> = ({ showMenu, scrollRefs, toggleMenuFunction, menuItems }: MenuProps) => {
+export const Menu: React.FunctionComponent<MenuProps> = ({
+  showMenu,
+  scrollRefs,
+  toggleMenuFunction,
+  menuItems,
+}: MenuProps) => {
   //   useEffect(() => {
   //     function handleClickOutside(event: MouseEvent) {
   //       console.log('mousedown!')
@@ -44,7 +44,7 @@ export const Menu: React.FunctionComponent<MenuProps> = ({ showMenu, scrollRefs,
     flexDirection: "column",
     width: "300px",
     position: "fixed",
-    top: "55px",
+    top: "50px",
     left: "-100%",
     opacity: "1",
     transition: "all 0.5s ease",

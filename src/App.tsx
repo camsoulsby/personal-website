@@ -15,10 +15,10 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 
 const App: React.FunctionComponent = () => {
   const homeRef = useRef(null);
-  const aboutRef = useRef(null);
+  // const aboutRef = useRef(null);
   const portfolioRef = useRef(null);
-  const experienceRef = useRef(null);
-  const contactRef = useRef(null);
+  // const experienceRef = useRef(null);
+  // const contactRef = useRef(null);
 
   const [menuShown, setMenuShown] = useState(false);
 

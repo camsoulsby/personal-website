@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Container, Button, Grid, IconButton } from "@mui/material";
+import { Typography, Container, Grid, IconButton } from "@mui/material";
 import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
 
 type FooterProps = {};
@@ -7,14 +7,14 @@ type FooterProps = {};
 export const Footer: React.FunctionComponent<FooterProps> = () => {
   const iconButtonFormat = { paddingLeft: "40px", paddingRight: "60px" };
 
-  function downloadFile(file: string) {
-    const link = document.createElement("a");
-    link.href = file;
-    link.download = "Cam Soulsby Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
+  // function downloadFile(file: string) {
+  //   const link = document.createElement("a");
+  //   link.href = file;
+  //   link.download = "Cam Soulsby Resume.pdf";
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // }
 
   return (
     <div>
