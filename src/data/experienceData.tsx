@@ -9,12 +9,16 @@ function createData(
 }
 // add data
 export const rows = [
-  createData("Current", "mStable", "Head of Operations", "Remote", [
-    "Leading operations for a team of 15 building a Decentralised Finance application",
-    "Handling day to day HR, payroll, accounting, and legal tasks for legal entities in Germany, Australia and New Zealand as well as for a Decentralized Autonomous Organization",
-    "Navigating a complex legal and regulatory environment in an emerging space",
-    "Working with a global and fully remote team and managing the resulting coordination challenges",
-  ]),
+  createData(
+    "Current",
+    "RealNZ",
+    "Head of Guest Serivces, Whakatipu",
+    "Queenstown",
+    [
+      "Managing four Visitor Centre locations in Queenstown",
+      "Managing RealNZ's central Contact Centre and Wholesale Reservations teams",
+    ]
+  ),
   createData(
     "2020-2021",
     "NZSki",

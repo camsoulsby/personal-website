@@ -1,5 +1,14 @@
 import React, { useRef, useState } from "react";
-import { About, Contact, Experience, Footer, Menu, PageHeader, Portfolio, Topnav } from './components';
+import {
+  About,
+  Contact,
+  Experience,
+  Footer,
+  Menu,
+  PageHeader,
+  Portfolio,
+  Topnav,
+} from "./components";
 import darkTheme from "./themes/DarkTheme";
 
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -26,14 +35,8 @@ const App: React.FunctionComponent = () => {
 
       <Menu
         showMenu={menuShown}
-        menuItems={["Home", "About Me", "Portfolio", "Experience", "Contact"]}
-        scrollRefs={[
-          homeRef,
-          aboutRef,
-          portfolioRef,
-          experienceRef,
-          contactRef,
-        ]}
+        menuItems={["Home", "Projects"]}
+        scrollRefs={[homeRef, portfolioRef]}
         toggleMenuFunction={toggleMenu}
       />
 
@@ -41,18 +44,18 @@ const App: React.FunctionComponent = () => {
         <div style={{ scrollMarginTop: "50px" }} ref={homeRef}>
           <PageHeader />
         </div>
-        <div style={{ scrollMarginTop: "50px" }} ref={aboutRef}>
+        {/* <div style={{ scrollMarginTop: "50px" }} ref={aboutRef}>
           <About />
-        </div>
+        </div> */}
         <div style={{ scrollMarginTop: "50px" }} ref={portfolioRef}>
           <Portfolio />
         </div>
-        <div style={{ scrollMarginTop: "50px" }} ref={experienceRef}>
+        {/* <div style={{ scrollMarginTop: "50px" }} ref={experienceRef}>
           <Experience />
-        </div>
-        <div style={{ scrollMarginTop: "50px" }} ref={contactRef}>
+        </div> */}
+        {/* <div style={{ scrollMarginTop: "50px" }} ref={contactRef}>
           <Contact />
-        </div>
+        </div> */}
       </main>
       <footer>
         <Footer />

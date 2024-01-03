@@ -10,7 +10,7 @@ export const PageHeader: React.FunctionComponent<PageHeaderProps> = () => {
         sx={{
           position: "relative",
           paddingTop: "120px",
-          height: ["600px", "780px", "600px"],
+          height: ["150px", "130px", "160px"],
         }}
       >
         <Box
@@ -20,25 +20,23 @@ export const PageHeader: React.FunctionComponent<PageHeaderProps> = () => {
             left: "0",
             height: "100%",
             width: "100%",
-            background:
-              'url("../images/paisley.jpg") top center/cover no-repeat',
-            filter: "brightness(40%)",
+            background: "#222",
           }}
         ></Box>
         <Typography
           sx={{
             position: "absolute",
-            top: ["220px", "230px", "210px"],
+            top: ["70px", "70px", "70px"],
             left: "50%",
             marginLeft: ["-150px", "-300px", "-400px"],
             height: "auto",
             width: ["300px", "600px", "800px"],
-            typography: ["h3", "h2", "h1"],
+            typography: ["h5", "h4", "h3"],
           }}
           align="center"
           color="primary.contrastText"
         >
-          Cam Soulsby
+          Cam Soulsby Web Development
         </Typography>
       </Container>
     </div>

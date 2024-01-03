@@ -2,7 +2,6 @@ import React from "react";
 import { Typography, Container, Button, Grid, IconButton } from "@mui/material";
 import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
 
-
 type FooterProps = {};
 
 export const Footer: React.FunctionComponent<FooterProps> = () => {
@@ -37,38 +36,43 @@ export const Footer: React.FunctionComponent<FooterProps> = () => {
               target="_blank"
               sx={iconButtonFormat}
             >
-              <GitHub sx={{color: "primary.contrastText", transform: 'scale(1.8)'}}/>
+              <GitHub
+                sx={{ color: "primary.contrastText", transform: "scale(1.8)" }}
+              />
             </IconButton>
             <IconButton
               href={"https://www.linkedin.com/in/camsoulsby/"}
               target="_blank"
               sx={iconButtonFormat}
             >
-            
-              <LinkedIn sx={{color: "primary.contrastText", transform: 'scale(1.8)'}}/>
+              <LinkedIn
+                sx={{ color: "primary.contrastText", transform: "scale(1.8)" }}
+              />
             </IconButton>
             <IconButton
               href={"https://twitter.com/camsoulsby"}
               target="_blank"
               sx={iconButtonFormat}
             >
-             <Twitter sx={{color: "primary.contrastText", transform: 'scale(1.8)'}}/>
+              <Twitter
+                sx={{ color: "primary.contrastText", transform: "scale(1.8)" }}
+              />
             </IconButton>
           </Grid>
-          <Typography variant="body1" align="center">
+          {/* <Typography variant="body1" align="center">
             <Button
               sx={{ color: "primary.contrastText" }}
               onClick={() => downloadFile("./documents/resume.pdf")}
             >
               Download Resume
             </Button>
-          </Typography>
+          </Typography> */}
           <Typography
             variant="body1"
             align="center"
             sx={{ paddingTop: "10px" }}
           >
-            &copy; 2023 Cam Soulsby
+            &copy; 2024 Cam Soulsby
           </Typography>
         </Container>
       </Container>
