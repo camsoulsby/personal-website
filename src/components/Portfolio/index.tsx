@@ -42,14 +42,6 @@ export const Portfolio: React.FunctionComponent<PortfolioProps> = () => {
                 siteLink="https://callreview.camsoulsby.com"
               />
             </Grid>
-            <Grid item>
-              <PortfolioCard
-                description="More coming soon..."
-                image=""
-                githubLink=""
-                siteLink=""
-              />
-            </Grid>
           </Grid>
         </Container>
       </Container>
