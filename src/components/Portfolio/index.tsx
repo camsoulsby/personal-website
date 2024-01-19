@@ -39,7 +39,7 @@ export const Portfolio: React.FunctionComponent<PortfolioProps> = () => {
                 description="AI phone call review application utilizing OpenAI APIs, built using React, Material UI, and TypeScript."
                 image="../images/callreview.png"
                 githubLink=""
-                siteLink="https://www.callreview.camsoulsby.com"
+                siteLink="https://callreview.camsoulsby.com"
               />
             </Grid>
             <Grid item>
